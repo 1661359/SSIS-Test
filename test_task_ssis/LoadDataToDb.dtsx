@@ -11,110 +11,10 @@
   DTS:LocaleID="1049"
   DTS:ObjectName="LoadDataToDb"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{85210364-D261-4DC0-8149-0844098A47E6}">
+  DTS:VersionBuild="67"
+  DTS:VersionGUID="{FF70C6AE-741C-4EAB-A6F5-E3C5FC06680D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Total Error File]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{0B1E583B-5E96-4B2C-8034-7D9D16FB18C6}"
-      DTS:ObjectName="Total Error File">
-      <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[$Project::workingDirectory] + @[$Project::logDirectory] + "total.txt"</DTS:PropertyExpression>
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1049"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1251"
-          DTS:ConnectionString="D:\test\logs\total.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="5"
-              DTS:TextQualified="True"
-              DTS:ObjectName="#"
-              DTS:DTSID="{52ECA5EE-7D72-4693-903E-496BB9EB4EE1}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Product"
-              DTS:DTSID="{AC8B24FE-39CD-49D5-B25C-3B7BE7C87B3A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Customer"
-              DTS:DTSID="{8F3A8DCC-4EA1-42E2-A654-5D00D0007FBD}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="TransactionId"
-              DTS:DTSID="{D4D07427-4FCE-49D0-AC2A-374E9960E026}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="5"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Price"
-              DTS:DTSID="{373BD11D-8795-42B4-8BF7-48F54717C31A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="5"
-              DTS:TextQualified="True"
-              DTS:ObjectName="F6"
-              DTS:DTSID="{E780877B-AD2E-4B61-9F66-1F1C500FE7EF}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Region"
-              DTS:DTSID="{66265FC7-761D-43BC-A54B-3D22E18A6D0E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Category"
-              DTS:DTSID="{AD4E3727-3275-4B15-B806-36A5CF35DBBA}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="5"
-              DTS:TextQualified="True"
-              DTS:ObjectName="F9"
-              DTS:DTSID="{C00557CD-BFBD-4D06-B768-FAA4AEFF0AD7}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
@@ -123,7 +23,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="errorsCount">
       <DTS:VariableValue
-        DTS:DataType="3">0</DTS:VariableValue>
+        DTS:DataType="3">3</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -142,11 +42,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Categories to DB\Aggregate"
+              refId="Package\Categories to DB\Aggregate Categories by Name"
               componentClassID="Microsoft.Aggregate"
               contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
               description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
-              name="Aggregate"
+              name="Aggregate Categories by Name"
               version="3">
               <properties>
                 <property
@@ -174,11 +74,11 @@
               </properties>
               <inputs>
                 <input
-                  refId="Package\Categories to DB\Aggregate.Inputs[Aggregate Input 1]"
+                  refId="Package\Categories to DB\Aggregate Categories by Name.Inputs[Aggregate Input 1]"
                   name="Aggregate Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Categories to DB\Aggregate.Inputs[Aggregate Input 1].Columns[Category]"
+                      refId="Package\Categories to DB\Aggregate Categories by Name.Inputs[Aggregate Input 1].Columns[Category]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Category"
@@ -189,7 +89,7 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Categories to DB\Aggregate.Outputs[Aggregate Output 1]"
+                  refId="Package\Categories to DB\Aggregate Categories by Name.Outputs[Aggregate Output 1]"
                   name="Aggregate Output 1">
                   <properties>
                     <property
@@ -204,10 +104,10 @@
                   </properties>
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Categories to DB\Aggregate.Outputs[Aggregate Output 1].Columns[Category]"
+                      refId="Package\Categories to DB\Aggregate Categories by Name.Outputs[Aggregate Output 1].Columns[Category]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Categories to DB\Aggregate.Outputs[Aggregate Output 1].Columns[Category]"
+                      lineageId="Package\Categories to DB\Aggregate Categories by Name.Outputs[Aggregate Output 1].Columns[Category]"
                       name="Category">
                       <properties>
                         <property
@@ -391,11 +291,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Categories to DB\To Categories"
+              refId="Package\Categories to DB\To Category table"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="To Categories"
+              name="To Category table"
               usesDispositions="true"
               version="4">
               <properties>
@@ -448,7 +348,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Categories to DB\To Categories.Connections[OleDbConnection]"
+                  refId="Package\Categories to DB\To Category table.Connections[OleDbConnection]"
                   connectionManagerID="{21A3F4AB-3909-4ACA-8A51-D42DA4BC6F6E}:external"
                   connectionManagerRefId="Project.ConnectionManagers[DbConnection]"
                   description="The OLE DB runtime connection used to access the database."
@@ -456,28 +356,28 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Categories to DB\To Categories.Inputs[OLE DB Destination Input]"
+                  refId="Package\Categories to DB\To Category table.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Categories to DB\To Categories.Inputs[OLE DB Destination Input].Columns[Category]"
+                      refId="Package\Categories to DB\To Category table.Inputs[OLE DB Destination Input].Columns[Category]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Category"
-                      externalMetadataColumnId="Package\Categories to DB\To Categories.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
-                      lineageId="Package\Categories to DB\Aggregate.Outputs[Aggregate Output 1].Columns[Category]" />
+                      externalMetadataColumnId="Package\Categories to DB\To Category table.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Categories to DB\Aggregate Categories by Name.Outputs[Aggregate Output 1].Columns[Category]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Categories to DB\To Categories.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
+                      refId="Package\Categories to DB\To Category table.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
                       dataType="i4"
                       name="CategoryID" />
                     <externalMetadataColumn
-                      refId="Package\Categories to DB\To Categories.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      refId="Package\Categories to DB\To Category table.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
                       dataType="wstr"
                       length="255"
                       name="Name" />
@@ -486,22 +386,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Categories to DB\To Categories.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Categories to DB\To Category table.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Categories to DB\To Categories.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Categories to DB\To Category table.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Categories to DB\To Categories.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Categories to DB\To Category table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Categories to DB\To Categories.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Categories to DB\To Category table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Categories to DB\To Categories.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Categories to DB\To Category table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Categories to DB\To Categories.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Categories to DB\To Category table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -513,12 +413,12 @@
           <paths>
             <path
               refId="Package\Categories to DB.Paths[Aggregate Output 1]"
-              endId="Package\Categories to DB\To Categories.Inputs[OLE DB Destination Input]"
+              endId="Package\Categories to DB\To Category table.Inputs[OLE DB Destination Input]"
               name="Aggregate Output 1"
-              startId="Package\Categories to DB\Aggregate.Outputs[Aggregate Output 1]" />
+              startId="Package\Categories to DB\Aggregate Categories by Name.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\Categories to DB.Paths[Excel Source Output]"
-              endId="Package\Categories to DB\Aggregate.Inputs[Aggregate Input 1]"
+              endId="Package\Categories to DB\Aggregate Categories by Name.Inputs[Aggregate Input 1]"
               name="Excel Source Output"
               startId="Package\Categories to DB\Excel Source.Outputs[Excel Source Output]" />
           </paths>
@@ -540,11 +440,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Customers to DB\Aggregate"
+              refId="Package\Customers to DB\Aggregate Customers by Name"
               componentClassID="Microsoft.Aggregate"
               contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
               description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
-              name="Aggregate"
+              name="Aggregate Customers by Name"
               version="3">
               <properties>
                 <property
@@ -572,11 +472,11 @@
               </properties>
               <inputs>
                 <input
-                  refId="Package\Customers to DB\Aggregate.Inputs[Aggregate Input 1]"
+                  refId="Package\Customers to DB\Aggregate Customers by Name.Inputs[Aggregate Input 1]"
                   name="Aggregate Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Customers to DB\Aggregate.Inputs[Aggregate Input 1].Columns[Customer]"
+                      refId="Package\Customers to DB\Aggregate Customers by Name.Inputs[Aggregate Input 1].Columns[Customer]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Customer"
@@ -587,7 +487,7 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Customers to DB\Aggregate.Outputs[Aggregate Output 1]"
+                  refId="Package\Customers to DB\Aggregate Customers by Name.Outputs[Aggregate Output 1]"
                   name="Aggregate Output 1">
                   <properties>
                     <property
@@ -602,10 +502,10 @@
                   </properties>
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Customers to DB\Aggregate.Outputs[Aggregate Output 1].Columns[Customer]"
+                      refId="Package\Customers to DB\Aggregate Customers by Name.Outputs[Aggregate Output 1].Columns[Customer]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Customers to DB\Aggregate.Outputs[Aggregate Output 1].Columns[Customer]"
+                      lineageId="Package\Customers to DB\Aggregate Customers by Name.Outputs[Aggregate Output 1].Columns[Customer]"
                       name="Customer">
                       <properties>
                         <property
@@ -866,7 +766,7 @@
                       cachedLength="255"
                       cachedName="Customer"
                       externalMetadataColumnId="Package\Customers to DB\To Customer table.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
-                      lineageId="Package\Customers to DB\Aggregate.Outputs[Aggregate Output 1].Columns[Customer]" />
+                      lineageId="Package\Customers to DB\Aggregate Customers by Name.Outputs[Aggregate Output 1].Columns[Customer]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -913,10 +813,10 @@
               refId="Package\Customers to DB.Paths[Aggregate Output 1]"
               endId="Package\Customers to DB\To Customer table.Inputs[OLE DB Destination Input]"
               name="Aggregate Output 1"
-              startId="Package\Customers to DB\Aggregate.Outputs[Aggregate Output 1]" />
+              startId="Package\Customers to DB\Aggregate Customers by Name.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\Customers to DB.Paths[Excel Source Output]"
-              endId="Package\Customers to DB\Aggregate.Inputs[Aggregate Input 1]"
+              endId="Package\Customers to DB\Aggregate Customers by Name.Inputs[Aggregate Input 1]"
               name="Excel Source Output"
               startId="Package\Customers to DB\Excel Source.Outputs[Excel Source Output]" />
           </paths>
@@ -937,6 +837,133 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Products to DB\Aggregate Products by Name with last date"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="Aggregate Products by Name with last date"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Products to DB\Aggregate Products by Name with last date.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Products to DB\Aggregate Products by Name with last date.Inputs[Aggregate Input 1].Columns[Product]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Product"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Products to DB\Excel Source.Outputs[Excel Source Output].Columns[Product]" />
+                    <inputColumn
+                      refId="Package\Products to DB\Aggregate Products by Name with last date.Inputs[Aggregate Input 1].Columns[Date]"
+                      cachedDataType="date"
+                      cachedName="Date"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Products to DB\Excel Source.Outputs[Excel Source Output].Columns[Date]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Products to DB\Aggregate Products by Name with last date.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Products to DB\Aggregate Products by Name with last date.Outputs[Aggregate Output 1].Columns[Product]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Products to DB\Aggregate Products by Name with last date.Outputs[Aggregate Output 1].Columns[Product]"
+                      name="Product">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Products to DB\Excel Source.Outputs[Excel Source Output].Columns[Product]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Products to DB\Aggregate Products by Name with last date.Outputs[Aggregate Output 1].Columns[Date]"
+                      dataType="date"
+                      lineageId="Package\Products to DB\Aggregate Products by Name with last date.Outputs[Aggregate Output 1].Columns[Date]"
+                      name="Date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Products to DB\Excel Source.Outputs[Excel Source Output].Columns[Date]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">7</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Products to DB\Excel Source"
               componentClassID="Microsoft.ExcelSource"
@@ -1140,11 +1167,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Products to DB\Lookup Category"
+              refId="Package\Products to DB\Lookup by Category"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup Category"
+              name="Lookup by Category"
               usesDispositions="true"
               version="6">
               <properties>
@@ -1208,7 +1235,7 @@ where [refTable].[Name] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Products to DB\Lookup Category.Connections[OleDbConnection]"
+                  refId="Package\Products to DB\Lookup by Category.Connections[OleDbConnection]"
                   connectionManagerID="{21A3F4AB-3909-4ACA-8A51-D42DA4BC6F6E}:external"
                   connectionManagerRefId="Project.ConnectionManagers[DbConnection]"
                   description="Connection manager used to access lookup data."
@@ -1216,11 +1243,11 @@ where [refTable].[Name] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Products to DB\Lookup Category.Inputs[Lookup Input]"
+                  refId="Package\Products to DB\Lookup by Category.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Products to DB\Lookup Category.Inputs[Lookup Input].Columns[Category]"
+                      refId="Package\Products to DB\Lookup by Category.Inputs[Lookup Input].Columns[Category]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Category"
@@ -1242,17 +1269,17 @@ where [refTable].[Name] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Products to DB\Lookup Category.Outputs[Lookup Match Output]"
+                  refId="Package\Products to DB\Lookup by Category.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Products to DB\Lookup Category.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Products to DB\Lookup by Category.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Products to DB\Lookup Category.Outputs[Lookup Match Output].Columns[CategoryID]"
+                      refId="Package\Products to DB\Lookup by Category.Outputs[Lookup Match Output].Columns[CategoryID]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Products to DB\Lookup Category.Outputs[Lookup Match Output].Columns[CategoryID]"
+                      lineageId="Package\Products to DB\Lookup by Category.Outputs[Lookup Match Output].Columns[CategoryID]"
                       name="CategoryID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1266,30 +1293,30 @@ where [refTable].[Name] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Products to DB\Lookup Category.Outputs[Lookup No Match Output]"
+                  refId="Package\Products to DB\Lookup by Category.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Products to DB\Lookup Category.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Products to DB\Lookup by Category.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Products to DB\Lookup Category.Outputs[Lookup Error Output]"
+                  refId="Package\Products to DB\Lookup by Category.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Products to DB\Lookup Category.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Products to DB\Lookup by Category.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Products to DB\Lookup Category.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Products to DB\Lookup by Category.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Products to DB\Lookup Category.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Products to DB\Lookup by Category.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Products to DB\Lookup Category.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Products to DB\Lookup by Category.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Products to DB\Lookup Category.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Products to DB\Lookup by Category.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1335,13 +1362,13 @@ where [refTable].[Name] = ?</property>
                       cachedLength="255"
                       cachedName="Product"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\Products to DB\Sort 1.Outputs[Sort Output].Columns[Product]" />
+                      lineageId="Package\Products to DB\Sort products by Name.Outputs[Sort Output].Columns[Product]" />
                     <inputColumn
                       refId="Package\Products to DB\Merge Join.Inputs[Merge Join Left Input].Columns[Date]"
                       cachedDataType="date"
                       cachedName="Date"
                       cachedSortKeyPosition="2"
-                      lineageId="Package\Products to DB\Sort 1.Outputs[Sort Output].Columns[Date]" />
+                      lineageId="Package\Products to DB\Sort products by Name.Outputs[Sort Output].Columns[Date]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1356,26 +1383,26 @@ where [refTable].[Name] = ?</property>
                       cachedLength="255"
                       cachedName="Product"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\Products to DB\Sort.Outputs[Sort Output].Columns[Product]" />
+                      lineageId="Package\Products to DB\Sort all by name.Outputs[Sort Output].Columns[Product]" />
                     <inputColumn
                       refId="Package\Products to DB\Merge Join.Inputs[Merge Join Right Input].Columns[Date]"
                       cachedDataType="date"
                       cachedName="Date"
                       cachedSortKeyPosition="2"
-                      lineageId="Package\Products to DB\Sort.Outputs[Sort Output].Columns[Date]" />
+                      lineageId="Package\Products to DB\Sort all by name.Outputs[Sort Output].Columns[Date]" />
                     <inputColumn
                       refId="Package\Products to DB\Merge Join.Inputs[Merge Join Right Input].Columns[Category]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Category"
                       cachedSortKeyPosition="3"
-                      lineageId="Package\Products to DB\Sort.Outputs[Sort Output].Columns[Category]" />
+                      lineageId="Package\Products to DB\Sort all by name.Outputs[Sort Output].Columns[Category]" />
                     <inputColumn
                       refId="Package\Products to DB\Merge Join.Inputs[Merge Join Right Input].Columns[Price]"
                       cachedDataType="r8"
                       cachedName="Price"
                       cachedSortKeyPosition="4"
-                      lineageId="Package\Products to DB\Sort.Outputs[Sort Output].Columns[Price]" />
+                      lineageId="Package\Products to DB\Sort all by name.Outputs[Sort Output].Columns[Price]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1486,138 +1513,11 @@ where [refTable].[Name] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Products to DB\Products with last date"
-              componentClassID="Microsoft.Aggregate"
-              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
-              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
-              name="Products with last date"
-              version="3">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
-                  name="KeyScale"
-                  typeConverter="KeyScaleType">0</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
-                  name="Keys" />
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
-                  name="CountDistinctScale"
-                  typeConverter="KeyScaleType">0</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
-                  name="CountDistinctKeys" />
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
-                  name="AutoExtendFactor">25</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Products to DB\Products with last date.Inputs[Aggregate Input 1]"
-                  name="Aggregate Input 1">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Products to DB\Products with last date.Inputs[Aggregate Input 1].Columns[Product]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Product"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Products to DB\Excel Source.Outputs[Excel Source Output].Columns[Product]" />
-                    <inputColumn
-                      refId="Package\Products to DB\Products with last date.Inputs[Aggregate Input 1].Columns[Date]"
-                      cachedDataType="date"
-                      cachedName="Date"
-                      cachedSortKeyPosition="2"
-                      lineageId="Package\Products to DB\Excel Source.Outputs[Excel Source Output].Columns[Date]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Products to DB\Products with last date.Outputs[Aggregate Output 1]"
-                  name="Aggregate Output 1">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
-                      name="KeyScale"
-                      typeConverter="KeyScaleType">0</property>
-                    <property
-                      dataType="System.Null"
-                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
-                      name="Keys" />
-                  </properties>
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Products to DB\Products with last date.Outputs[Aggregate Output 1].Columns[Product]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Products to DB\Products with last date.Outputs[Aggregate Output 1].Columns[Product]"
-                      name="Product">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Products to DB\Excel Source.Outputs[Excel Source Output].Columns[Product]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Products to DB\Products with last date.Outputs[Aggregate Output 1].Columns[Date]"
-                      dataType="date"
-                      lineageId="Package\Products to DB\Products with last date.Outputs[Aggregate Output 1].Columns[Date]"
-                      name="Date">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Products to DB\Excel Source.Outputs[Excel Source Output].Columns[Date]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">7</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Products to DB\Sort"
+              refId="Package\Products to DB\Sort all by name"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort"
+              name="Sort all by name"
               version="1">
               <properties>
                 <property
@@ -1632,11 +1532,11 @@ where [refTable].[Name] = ?</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Products to DB\Sort.Inputs[Sort Input]"
+                  refId="Package\Products to DB\Sort all by name.Inputs[Sort Input]"
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Products to DB\Sort.Inputs[Sort Input].Columns[Product]"
+                      refId="Package\Products to DB\Sort all by name.Inputs[Sort Input].Columns[Product]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Product"
@@ -1654,7 +1554,7 @@ where [refTable].[Name] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Products to DB\Sort.Inputs[Sort Input].Columns[Category]"
+                      refId="Package\Products to DB\Sort all by name.Inputs[Sort Input].Columns[Category]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Category"
@@ -1671,7 +1571,7 @@ where [refTable].[Name] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Products to DB\Sort.Inputs[Sort Input].Columns[Price]"
+                      refId="Package\Products to DB\Sort all by name.Inputs[Sort Input].Columns[Price]"
                       cachedDataType="r8"
                       cachedName="Price"
                       lineageId="Package\Products to DB\Excel Source.Outputs[Excel Source Output].Columns[Price]">
@@ -1687,7 +1587,7 @@ where [refTable].[Name] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Products to DB\Sort.Inputs[Sort Input].Columns[Date]"
+                      refId="Package\Products to DB\Sort all by name.Inputs[Sort Input].Columns[Date]"
                       cachedDataType="date"
                       cachedName="Date"
                       cachedSortKeyPosition="2"
@@ -1709,15 +1609,15 @@ where [refTable].[Name] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Products to DB\Sort.Outputs[Sort Output]"
+                  refId="Package\Products to DB\Sort all by name.Outputs[Sort Output]"
                   isSorted="true"
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Products to DB\Sort.Outputs[Sort Output].Columns[Product]"
+                      refId="Package\Products to DB\Sort all by name.Outputs[Sort Output].Columns[Product]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Products to DB\Sort.Outputs[Sort Output].Columns[Product]"
+                      lineageId="Package\Products to DB\Sort all by name.Outputs[Sort Output].Columns[Product]"
                       name="Product"
                       sortKeyPosition="1">
                       <properties>
@@ -1729,10 +1629,10 @@ where [refTable].[Name] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Products to DB\Sort.Outputs[Sort Output].Columns[Category]"
+                      refId="Package\Products to DB\Sort all by name.Outputs[Sort Output].Columns[Category]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Products to DB\Sort.Outputs[Sort Output].Columns[Category]"
+                      lineageId="Package\Products to DB\Sort all by name.Outputs[Sort Output].Columns[Category]"
                       name="Category"
                       sortKeyPosition="3">
                       <properties>
@@ -1744,9 +1644,9 @@ where [refTable].[Name] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Products to DB\Sort.Outputs[Sort Output].Columns[Price]"
+                      refId="Package\Products to DB\Sort all by name.Outputs[Sort Output].Columns[Price]"
                       dataType="r8"
-                      lineageId="Package\Products to DB\Sort.Outputs[Sort Output].Columns[Price]"
+                      lineageId="Package\Products to DB\Sort all by name.Outputs[Sort Output].Columns[Price]"
                       name="Price"
                       sortKeyPosition="4">
                       <properties>
@@ -1758,9 +1658,9 @@ where [refTable].[Name] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Products to DB\Sort.Outputs[Sort Output].Columns[Date]"
+                      refId="Package\Products to DB\Sort all by name.Outputs[Sort Output].Columns[Date]"
                       dataType="date"
-                      lineageId="Package\Products to DB\Sort.Outputs[Sort Output].Columns[Date]"
+                      lineageId="Package\Products to DB\Sort all by name.Outputs[Sort Output].Columns[Date]"
                       name="Date"
                       sortKeyPosition="2">
                       <properties>
@@ -1777,11 +1677,11 @@ where [refTable].[Name] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Products to DB\Sort 1"
+              refId="Package\Products to DB\Sort products by Name"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort 1"
+              name="Sort products by Name"
               version="1">
               <properties>
                 <property
@@ -1796,15 +1696,15 @@ where [refTable].[Name] = ?</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Products to DB\Sort 1.Inputs[Sort Input]"
+                  refId="Package\Products to DB\Sort products by Name.Inputs[Sort Input]"
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Products to DB\Sort 1.Inputs[Sort Input].Columns[Product]"
+                      refId="Package\Products to DB\Sort products by Name.Inputs[Sort Input].Columns[Product]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Product"
-                      lineageId="Package\Products to DB\Products with last date.Outputs[Aggregate Output 1].Columns[Product]">
+                      lineageId="Package\Products to DB\Aggregate Products by Name with last date.Outputs[Aggregate Output 1].Columns[Product]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1817,10 +1717,10 @@ where [refTable].[Name] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Products to DB\Sort 1.Inputs[Sort Input].Columns[Date]"
+                      refId="Package\Products to DB\Sort products by Name.Inputs[Sort Input].Columns[Date]"
                       cachedDataType="date"
                       cachedName="Date"
-                      lineageId="Package\Products to DB\Products with last date.Outputs[Aggregate Output 1].Columns[Date]">
+                      lineageId="Package\Products to DB\Aggregate Products by Name with last date.Outputs[Aggregate Output 1].Columns[Date]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1838,15 +1738,15 @@ where [refTable].[Name] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Products to DB\Sort 1.Outputs[Sort Output]"
+                  refId="Package\Products to DB\Sort products by Name.Outputs[Sort Output]"
                   isSorted="true"
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Products to DB\Sort 1.Outputs[Sort Output].Columns[Product]"
+                      refId="Package\Products to DB\Sort products by Name.Outputs[Sort Output].Columns[Product]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Products to DB\Sort 1.Outputs[Sort Output].Columns[Product]"
+                      lineageId="Package\Products to DB\Sort products by Name.Outputs[Sort Output].Columns[Product]"
                       name="Product"
                       sortKeyPosition="1">
                       <properties>
@@ -1854,13 +1754,13 @@ where [refTable].[Name] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Products to DB\Products with last date.Outputs[Aggregate Output 1].Columns[Product]}</property>
+                          name="SortColumnId">#{Package\Products to DB\Aggregate Products by Name with last date.Outputs[Aggregate Output 1].Columns[Product]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Products to DB\Sort 1.Outputs[Sort Output].Columns[Date]"
+                      refId="Package\Products to DB\Sort products by Name.Outputs[Sort Output].Columns[Date]"
                       dataType="date"
-                      lineageId="Package\Products to DB\Sort 1.Outputs[Sort Output].Columns[Date]"
+                      lineageId="Package\Products to DB\Sort products by Name.Outputs[Sort Output].Columns[Date]"
                       name="Date"
                       sortKeyPosition="2">
                       <properties>
@@ -1868,7 +1768,7 @@ where [refTable].[Name] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Products to DB\Products with last date.Outputs[Aggregate Output 1].Columns[Date]}</property>
+                          name="SortColumnId">#{Package\Products to DB\Aggregate Products by Name with last date.Outputs[Aggregate Output 1].Columns[Date]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1953,7 +1853,7 @@ where [refTable].[Name] = ?</property>
                       cachedDataType="i4"
                       cachedName="CategoryID"
                       externalMetadataColumnId="Package\Products to DB\To Product Table.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
-                      lineageId="Package\Products to DB\Lookup Category.Outputs[Lookup Match Output].Columns[CategoryID]" />
+                      lineageId="Package\Products to DB\Lookup by Category.Outputs[Lookup Match Output].Columns[CategoryID]" />
                     <inputColumn
                       refId="Package\Products to DB\To Product Table.Inputs[OLE DB Destination Input].Columns[Price]"
                       cachedDataType="r8"
@@ -2020,9 +1920,9 @@ where [refTable].[Name] = ?</property>
           <paths>
             <path
               refId="Package\Products to DB.Paths[Aggregate Output 1]"
-              endId="Package\Products to DB\Sort 1.Inputs[Sort Input]"
+              endId="Package\Products to DB\Sort products by Name.Inputs[Sort Input]"
               name="Aggregate Output 1"
-              startId="Package\Products to DB\Products with last date.Outputs[Aggregate Output 1]" />
+              startId="Package\Products to DB\Aggregate Products by Name with last date.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\Products to DB.Paths[Excel Source Output]"
               endId="Package\Products to DB\Multicast.Inputs[Multicast Input 1]"
@@ -2032,32 +1932,32 @@ where [refTable].[Name] = ?</property>
               refId="Package\Products to DB.Paths[Lookup Match Output]"
               endId="Package\Products to DB\To Product Table.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
-              startId="Package\Products to DB\Lookup Category.Outputs[Lookup Match Output]" />
+              startId="Package\Products to DB\Lookup by Category.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Products to DB.Paths[Merge Join Output]"
-              endId="Package\Products to DB\Lookup Category.Inputs[Lookup Input]"
+              endId="Package\Products to DB\Lookup by Category.Inputs[Lookup Input]"
               name="Merge Join Output"
               startId="Package\Products to DB\Merge Join.Outputs[Merge Join Output]" />
             <path
               refId="Package\Products to DB.Paths[Multicast Output 1]"
-              endId="Package\Products to DB\Products with last date.Inputs[Aggregate Input 1]"
+              endId="Package\Products to DB\Aggregate Products by Name with last date.Inputs[Aggregate Input 1]"
               name="Multicast Output 1"
               startId="Package\Products to DB\Multicast.Outputs[Multicast Output 1]" />
             <path
               refId="Package\Products to DB.Paths[Multicast Output 2]"
-              endId="Package\Products to DB\Sort.Inputs[Sort Input]"
+              endId="Package\Products to DB\Sort all by name.Inputs[Sort Input]"
               name="Multicast Output 2"
               startId="Package\Products to DB\Multicast.Outputs[Multicast Output 2]" />
             <path
               refId="Package\Products to DB.Paths[Sort Output]"
               endId="Package\Products to DB\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
-              startId="Package\Products to DB\Sort 1.Outputs[Sort Output]" />
+              startId="Package\Products to DB\Sort products by Name.Outputs[Sort Output]" />
             <path
               refId="Package\Products to DB.Paths[Sort Output1]"
               endId="Package\Products to DB\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
-              startId="Package\Products to DB\Sort.Outputs[Sort Output]" />
+              startId="Package\Products to DB\Sort all by name.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2246,169 +2146,11 @@ where [refTable].[Name] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Products to Transaction\Lookup ProductID"
+              refId="Package\Products to Transaction\Lookup  by Transaction"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup ProductID"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Product]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Product]) [refTable]
-where [refTable].[Name] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">1</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Price" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CategoryID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Products to Transaction\182:invalid};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1251</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Products to Transaction\Lookup ProductID.Connections[OleDbConnection]"
-                  connectionManagerID="{21A3F4AB-3909-4ACA-8A51-D42DA4BC6F6E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DbConnection]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Products to Transaction\Lookup ProductID.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Products to Transaction\Lookup ProductID.Inputs[Lookup Input].Columns[Product]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Product"
-                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Product]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Name</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Products to Transaction\Lookup ProductID.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\Products to Transaction\Lookup ProductID.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Products to Transaction\Lookup ProductID.Outputs[Lookup Match Output].Columns[ProductID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Products to Transaction\Lookup ProductID.Outputs[Lookup Match Output].Columns[ProductID]"
-                      name="ProductID"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">ProductID</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Products to Transaction\Lookup ProductID.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\Products to Transaction\Lookup ProductID.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Products to Transaction\Lookup ProductID.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\Products to Transaction\Lookup ProductID.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Products to Transaction\Lookup ProductID.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Products to Transaction\Lookup ProductID.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Products to Transaction\Lookup ProductID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Products to Transaction\Lookup ProductID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Products to Transaction\Lookup TransactionID"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup TransactionID"
+              name="Lookup  by Transaction"
               usesDispositions="true"
               version="6">
               <properties>
@@ -2472,7 +2214,7 @@ where [refTable].[InternalID] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Products to Transaction\Lookup TransactionID.Connections[OleDbConnection]"
+                  refId="Package\Products to Transaction\Lookup  by Transaction.Connections[OleDbConnection]"
                   connectionManagerID="{21A3F4AB-3909-4ACA-8A51-D42DA4BC6F6E}:external"
                   connectionManagerRefId="Project.ConnectionManagers[DbConnection]"
                   description="Connection manager used to access lookup data."
@@ -2480,11 +2222,11 @@ where [refTable].[InternalID] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Products to Transaction\Lookup TransactionID.Inputs[Lookup Input]"
+                  refId="Package\Products to Transaction\Lookup  by Transaction.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Products to Transaction\Lookup TransactionID.Inputs[Lookup Input].Columns[TransactionId]"
+                      refId="Package\Products to Transaction\Lookup  by Transaction.Inputs[Lookup Input].Columns[TransactionId]"
                       cachedDataType="i4"
                       cachedName="TransactionId"
                       lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]">
@@ -2505,17 +2247,17 @@ where [refTable].[InternalID] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Products to Transaction\Lookup TransactionID.Outputs[Lookup Match Output]"
+                  refId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Products to Transaction\Lookup TransactionID.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Products to Transaction\Lookup  by Transaction.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Products to Transaction\Lookup TransactionID.Outputs[Lookup Match Output].Columns[TransactionID]"
+                      refId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Match Output].Columns[TransactionID]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Products to Transaction\Lookup TransactionID.Outputs[Lookup Match Output].Columns[TransactionID]"
+                      lineageId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Match Output].Columns[TransactionID]"
                       name="TransactionID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -2529,30 +2271,188 @@ where [refTable].[InternalID] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Products to Transaction\Lookup TransactionID.Outputs[Lookup No Match Output]"
+                  refId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Products to Transaction\Lookup TransactionID.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Products to Transaction\Lookup  by Transaction.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Products to Transaction\Lookup TransactionID.Outputs[Lookup Error Output]"
+                  refId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Products to Transaction\Lookup TransactionID.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Products to Transaction\Lookup  by Transaction.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Products to Transaction\Lookup TransactionID.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Products to Transaction\Lookup TransactionID.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Products to Transaction\Lookup TransactionID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Products to Transaction\Lookup TransactionID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Products to Transaction\Lookup by Product"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup by Product"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Product]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Product]) [refTable]
+where [refTable].[Name] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Price" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CategoryID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Products to Transaction\183:invalid};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Products to Transaction\Lookup by Product.Connections[OleDbConnection]"
+                  connectionManagerID="{21A3F4AB-3909-4ACA-8A51-D42DA4BC6F6E}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DbConnection]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Products to Transaction\Lookup by Product.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Products to Transaction\Lookup by Product.Inputs[Lookup Input].Columns[Product]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Product"
+                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Product]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Name</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Products to Transaction\Lookup by Product.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Match Output].Columns[ProductID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Match Output].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ProductID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Products to Transaction\Lookup by Product.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Products to Transaction\Lookup by Product.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2637,13 +2537,13 @@ where [refTable].[InternalID] = ?</property>
                       cachedDataType="i4"
                       cachedName="ProductID"
                       externalMetadataColumnId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
-                      lineageId="Package\Products to Transaction\Lookup ProductID.Outputs[Lookup Match Output].Columns[ProductID]" />
+                      lineageId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Match Output].Columns[ProductID]" />
                     <inputColumn
                       refId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input].Columns[TransactionID]"
                       cachedDataType="i4"
                       cachedName="TransactionID"
                       externalMetadataColumnId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input].ExternalColumns[TransactionID]"
-                      lineageId="Package\Products to Transaction\Lookup TransactionID.Outputs[Lookup Match Output].Columns[TransactionID]" />
+                      lineageId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Match Output].Columns[TransactionID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2687,19 +2587,19 @@ where [refTable].[InternalID] = ?</property>
           <paths>
             <path
               refId="Package\Products to Transaction.Paths[Excel Source Output]"
-              endId="Package\Products to Transaction\Lookup ProductID.Inputs[Lookup Input]"
+              endId="Package\Products to Transaction\Lookup by Product.Inputs[Lookup Input]"
               name="Excel Source Output"
               startId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output]" />
             <path
               refId="Package\Products to Transaction.Paths[Lookup Match Output]"
               endId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
-              startId="Package\Products to Transaction\Lookup TransactionID.Outputs[Lookup Match Output]" />
+              startId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Products to Transaction.Paths[Lookup Match Output1]"
-              endId="Package\Products to Transaction\Lookup TransactionID.Inputs[Lookup Input]"
+              endId="Package\Products to Transaction\Lookup  by Transaction.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Products to Transaction\Lookup ProductID.Outputs[Lookup Match Output]" />
+              startId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Match Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2719,11 +2619,11 @@ where [refTable].[InternalID] = ?</property>
           version="1">
           <components>
             <component
-              refId="Package\Transaction to DB\Aggregate"
+              refId="Package\Transaction to DB\Aggregate transactions"
               componentClassID="Microsoft.Aggregate"
               contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
               description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
-              name="Aggregate"
+              name="Aggregate transactions"
               version="3">
               <properties>
                 <property
@@ -2751,27 +2651,27 @@ where [refTable].[InternalID] = ?</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Transaction to DB\Aggregate.Inputs[Aggregate Input 1]"
+                  refId="Package\Transaction to DB\Aggregate transactions.Inputs[Aggregate Input 1]"
                   name="Aggregate Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Transaction to DB\Aggregate.Inputs[Aggregate Input 1].Columns[TransactionId]"
+                      refId="Package\Transaction to DB\Aggregate transactions.Inputs[Aggregate Input 1].Columns[TransactionId]"
                       cachedDataType="r8"
                       cachedName="TransactionId"
                       lineageId="Package\Transaction to DB\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]" />
                     <inputColumn
-                      refId="Package\Transaction to DB\Aggregate.Inputs[Aggregate Input 1].Columns[CustomerID]"
+                      refId="Package\Transaction to DB\Aggregate transactions.Inputs[Aggregate Input 1].Columns[CustomerID]"
                       cachedDataType="i4"
                       cachedName="CustomerID"
-                      lineageId="Package\Transaction to DB\Lookup CustomerID.Outputs[Lookup Match Output].Columns[CustomerID]" />
+                      lineageId="Package\Transaction to DB\Lookup by Customer.Outputs[Lookup Match Output].Columns[CustomerID]" />
                     <inputColumn
-                      refId="Package\Transaction to DB\Aggregate.Inputs[Aggregate Input 1].Columns[Region]"
+                      refId="Package\Transaction to DB\Aggregate transactions.Inputs[Aggregate Input 1].Columns[Region]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Region"
                       lineageId="Package\Transaction to DB\Excel Source.Outputs[Excel Source Output].Columns[Region]" />
                     <inputColumn
-                      refId="Package\Transaction to DB\Aggregate.Inputs[Aggregate Input 1].Columns[Date]"
+                      refId="Package\Transaction to DB\Aggregate transactions.Inputs[Aggregate Input 1].Columns[Date]"
                       cachedDataType="date"
                       cachedName="Date"
                       lineageId="Package\Transaction to DB\Excel Source.Outputs[Excel Source Output].Columns[Date]" />
@@ -2781,7 +2681,7 @@ where [refTable].[InternalID] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Transaction to DB\Aggregate.Outputs[Aggregate Output 1]"
+                  refId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1]"
                   name="Aggregate Output 1">
                   <properties>
                     <property
@@ -2796,9 +2696,9 @@ where [refTable].[InternalID] = ?</property>
                   </properties>
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Transaction to DB\Aggregate.Outputs[Aggregate Output 1].Columns[TransactionId]"
+                      refId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[TransactionId]"
                       dataType="r8"
-                      lineageId="Package\Transaction to DB\Aggregate.Outputs[Aggregate Output 1].Columns[TransactionId]"
+                      lineageId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[TransactionId]"
                       name="TransactionId">
                       <properties>
                         <property
@@ -2822,10 +2722,10 @@ where [refTable].[InternalID] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Transaction to DB\Aggregate.Outputs[Aggregate Output 1].Columns[Region]"
+                      refId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[Region]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Transaction to DB\Aggregate.Outputs[Aggregate Output 1].Columns[Region]"
+                      lineageId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[Region]"
                       name="Region">
                       <properties>
                         <property
@@ -2849,16 +2749,16 @@ where [refTable].[InternalID] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Transaction to DB\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerID]"
+                      refId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[CustomerID]"
                       dataType="i4"
-                      lineageId="Package\Transaction to DB\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerID]"
+                      lineageId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[CustomerID]"
                       name="CustomerID">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Transaction to DB\Lookup CustomerID.Outputs[Lookup Match Output].Columns[CustomerID]}</property>
+                          name="AggregationColumnId">#{Package\Transaction to DB\Lookup by Customer.Outputs[Lookup Match Output].Columns[CustomerID]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
@@ -2875,9 +2775,9 @@ where [refTable].[InternalID] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Transaction to DB\Aggregate.Outputs[Aggregate Output 1].Columns[Date]"
+                      refId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[Date]"
                       dataType="date"
-                      lineageId="Package\Transaction to DB\Aggregate.Outputs[Aggregate Output 1].Columns[Date]"
+                      lineageId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[Date]"
                       name="Date">
                       <properties>
                         <property
@@ -3105,11 +3005,11 @@ where [refTable].[InternalID] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Transaction to DB\Lookup CustomerID"
+              refId="Package\Transaction to DB\Lookup by Customer"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup CustomerID"
+              name="Lookup by Customer"
               usesDispositions="true"
               version="6">
               <properties>
@@ -3173,7 +3073,7 @@ where [refTable].[Name] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Transaction to DB\Lookup CustomerID.Connections[OleDbConnection]"
+                  refId="Package\Transaction to DB\Lookup by Customer.Connections[OleDbConnection]"
                   connectionManagerID="{21A3F4AB-3909-4ACA-8A51-D42DA4BC6F6E}:external"
                   connectionManagerRefId="Project.ConnectionManagers[DbConnection]"
                   description="Connection manager used to access lookup data."
@@ -3181,11 +3081,11 @@ where [refTable].[Name] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Transaction to DB\Lookup CustomerID.Inputs[Lookup Input]"
+                  refId="Package\Transaction to DB\Lookup by Customer.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Transaction to DB\Lookup CustomerID.Inputs[Lookup Input].Columns[Customer]"
+                      refId="Package\Transaction to DB\Lookup by Customer.Inputs[Lookup Input].Columns[Customer]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Customer"
@@ -3207,17 +3107,17 @@ where [refTable].[Name] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Transaction to DB\Lookup CustomerID.Outputs[Lookup Match Output]"
+                  refId="Package\Transaction to DB\Lookup by Customer.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Transaction to DB\Lookup CustomerID.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Transaction to DB\Lookup by Customer.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Transaction to DB\Lookup CustomerID.Outputs[Lookup Match Output].Columns[CustomerID]"
+                      refId="Package\Transaction to DB\Lookup by Customer.Outputs[Lookup Match Output].Columns[CustomerID]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Transaction to DB\Lookup CustomerID.Outputs[Lookup Match Output].Columns[CustomerID]"
+                      lineageId="Package\Transaction to DB\Lookup by Customer.Outputs[Lookup Match Output].Columns[CustomerID]"
                       name="CustomerID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -3231,30 +3131,30 @@ where [refTable].[Name] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Transaction to DB\Lookup CustomerID.Outputs[Lookup No Match Output]"
+                  refId="Package\Transaction to DB\Lookup by Customer.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Transaction to DB\Lookup CustomerID.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Transaction to DB\Lookup by Customer.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Transaction to DB\Lookup CustomerID.Outputs[Lookup Error Output]"
+                  refId="Package\Transaction to DB\Lookup by Customer.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Transaction to DB\Lookup CustomerID.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Transaction to DB\Lookup by Customer.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Transaction to DB\Lookup CustomerID.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Transaction to DB\Lookup by Customer.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Transaction to DB\Lookup CustomerID.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Transaction to DB\Lookup by Customer.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Transaction to DB\Lookup CustomerID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Transaction to DB\Lookup by Customer.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Transaction to DB\Lookup CustomerID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Transaction to DB\Lookup by Customer.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3340,25 +3240,25 @@ where [refTable].[Name] = ?</property>
                       cachedLength="255"
                       cachedName="Region"
                       externalMetadataColumnId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
-                      lineageId="Package\Transaction to DB\Aggregate.Outputs[Aggregate Output 1].Columns[Region]" />
+                      lineageId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[Region]" />
                     <inputColumn
                       refId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].Columns[CustomerID]"
                       cachedDataType="i4"
                       cachedName="CustomerID"
                       externalMetadataColumnId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
-                      lineageId="Package\Transaction to DB\Aggregate.Outputs[Aggregate Output 1].Columns[CustomerID]" />
+                      lineageId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[CustomerID]" />
                     <inputColumn
                       refId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].Columns[TransactionId]"
                       cachedDataType="r8"
                       cachedName="TransactionId"
                       externalMetadataColumnId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].ExternalColumns[InternalID]"
-                      lineageId="Package\Transaction to DB\Aggregate.Outputs[Aggregate Output 1].Columns[TransactionId]" />
+                      lineageId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[TransactionId]" />
                     <inputColumn
                       refId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].Columns[Date]"
                       cachedDataType="date"
                       cachedName="Date"
                       externalMetadataColumnId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      lineageId="Package\Transaction to DB\Aggregate.Outputs[Aggregate Output 1].Columns[Date]" />
+                      lineageId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[Date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3417,694 +3317,23 @@ where [refTable].[Name] = ?</property>
               refId="Package\Transaction to DB.Paths[Aggregate Output 1]"
               endId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input]"
               name="Aggregate Output 1"
-              startId="Package\Transaction to DB\Aggregate.Outputs[Aggregate Output 1]" />
+              startId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\Transaction to DB.Paths[Excel Source Output]"
-              endId="Package\Transaction to DB\Lookup CustomerID.Inputs[Lookup Input]"
+              endId="Package\Transaction to DB\Lookup by Customer.Inputs[Lookup Input]"
               name="Excel Source Output"
               startId="Package\Transaction to DB\Excel Source.Outputs[Excel Source Output]" />
             <path
               refId="Package\Transaction to DB.Paths[Lookup Match Output]"
-              endId="Package\Transaction to DB\Aggregate.Inputs[Aggregate Input 1]"
+              endId="Package\Transaction to DB\Aggregate transactions.Inputs[Aggregate Input 1]"
               name="Lookup Match Output"
-              startId="Package\Transaction to DB\Lookup CustomerID.Outputs[Lookup Match Output]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Validate Excel file"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{997a54cd-64e6-4792-9a5d-9a8b2ed8e130}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Validate Excel file"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\Validate Excel file\Conditional Split"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[#]"
-                      cachedDataType="r8"
-                      cachedName="#"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[#]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[Product]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Product"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Product]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[Customer]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Customer"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Customer]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[TransactionId]"
-                      cachedDataType="i4"
-                      cachedName="TransactionId"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[Price]"
-                      cachedDataType="r8"
-                      cachedName="Price"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Price]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[Region]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Region"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Region]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[Category]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Category"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Category]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[Date]"
-                      cachedDataType="date"
-                      cachedName="Date"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Date]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Validate Excel file\Conditional Split.Outputs[error]"
-                  description="Output 2 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="error"
-                  synchronousInputId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Date]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[#]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Product]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Customer]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Price]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Category]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Region]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL(Date) || ISNULL([#]) || ISNULL(Product) || ISNULL(Customer) || ISNULL(TransactionId) || ISNULL(Price) || ISNULL(Category) || ISNULL(Region)</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Validate Excel file\Conditional Split.Outputs[default]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="default"
-                  synchronousInputId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Validate Excel file\Conditional Split.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Validate Excel file\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Validate Excel file\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Validate Excel file\Excel Source"
-              componentClassID="Microsoft.ExcelSource"
-              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Excel Source"
-              name="Excel Source"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">'Sample-spreadsheet-file$'</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mapping from parameters in the SQL command to variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Validate Excel file\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{D783054E-137D-4A8E-B0AF-8BF217A3178A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[File connection]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output]"
-                  name="Excel Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[#]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[#]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[#]"
-                      name="#"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Product]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[Product]"
-                      length="255"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Product]"
-                      name="Product"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Customer]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[Customer]"
-                      length="255"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Customer]"
-                      name="Customer"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[TransactionId]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]"
-                      name="TransactionId"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Price]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[Price]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Price]"
-                      name="Price"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F6]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[F6]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F6]"
-                      name="F6"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Region]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[Region]"
-                      length="255"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Region]"
-                      name="Region"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Category]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[Category]"
-                      length="255"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Category]"
-                      name="Category"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F9]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[F9]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F9]"
-                      name="F9"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Date]"
-                      dataType="date"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[Date]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Date]"
-                      name="Date"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F11]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[F11]"
-                      length="255"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F11]"
-                      name="F11"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F12]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[F12]"
-                      length="255"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F12]"
-                      name="F12"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F13]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[F13]"
-                      length="255"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F13]"
-                      name="F13"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[#]"
-                      dataType="r8"
-                      name="#" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[Product]"
-                      dataType="wstr"
-                      length="255"
-                      name="Product" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[Customer]"
-                      dataType="wstr"
-                      length="255"
-                      name="Customer" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[TransactionId]"
-                      dataType="r8"
-                      name="TransactionId" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[Price]"
-                      dataType="r8"
-                      name="Price" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[F6]"
-                      dataType="r8"
-                      name="F6" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[Region]"
-                      dataType="wstr"
-                      length="255"
-                      name="Region" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[Category]"
-                      dataType="wstr"
-                      length="255"
-                      name="Category" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[F9]"
-                      dataType="r8"
-                      name="F9" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[Date]"
-                      dataType="date"
-                      name="Date" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[F11]"
-                      dataType="wstr"
-                      length="255"
-                      name="F11" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[F12]"
-                      dataType="wstr"
-                      length="255"
-                      name="F12" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].ExternalColumns[F13]"
-                      dataType="wstr"
-                      length="255"
-                      name="F13" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output]"
-                  isErrorOut="true"
-                  name="Excel Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[#]"
-                      dataType="r8"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[#]"
-                      name="#" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[Product]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[Product]"
-                      name="Product" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[Customer]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[Customer]"
-                      name="Customer" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[TransactionId]"
-                      dataType="r8"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[TransactionId]"
-                      name="TransactionId" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[Price]"
-                      dataType="r8"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[Price]"
-                      name="Price" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[F6]"
-                      dataType="r8"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[F6]"
-                      name="F6" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[Region]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[Region]"
-                      name="Region" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[Category]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[Category]"
-                      name="Category" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[F9]"
-                      dataType="r8"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[F9]"
-                      name="F9" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[Date]"
-                      dataType="date"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[Date]"
-                      name="Date" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[F11]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[F11]"
-                      name="F11" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[F12]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[F12]"
-                      name="F12" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[F13]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[F13]"
-                      name="F13" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Validate Excel file\Flat File Destination"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Flat File Destination"
-              localeId="1049"
-              name="Flat File Destination">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Validate Excel file\Flat File Destination.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Total Error File]"
-                  connectionManagerRefId="Package.ConnectionManagers[Total Error File]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[#]"
-                      cachedDataType="r8"
-                      cachedName="#"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[#]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[#]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[Product]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Product"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Product]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Product]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[Customer]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Customer"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Customer]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Customer]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[TransactionId]"
-                      cachedDataType="i4"
-                      cachedName="TransactionId"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TransactionId]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[Price]"
-                      cachedDataType="r8"
-                      cachedName="Price"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Price]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Price]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[F6]"
-                      cachedDataType="r8"
-                      cachedName="F6"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[F6]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F6]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[Region]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Region"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Region]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Region]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[Category]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Category"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Category]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Category]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[F9]"
-                      cachedDataType="r8"
-                      cachedName="F9"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[F9]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F9]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[#]"
-                      dataType="r8"
-                      name="#" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Product]"
-                      dataType="wstr"
-                      length="255"
-                      name="Product" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Customer]"
-                      dataType="wstr"
-                      length="255"
-                      name="Customer" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TransactionId]"
-                      dataType="i4"
-                      name="TransactionId" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Price]"
-                      dataType="r8"
-                      name="Price" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[F6]"
-                      dataType="r8"
-                      name="F6" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Region]"
-                      dataType="wstr"
-                      length="255"
-                      name="Region" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Category]"
-                      dataType="wstr"
-                      length="255"
-                      name="Category" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[F9]"
-                      dataType="r8"
-                      name="F9" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-            </component>
-            <component
-              refId="Package\Validate Excel file\Row Count"
-              componentClassID="Microsoft.RowCount"
-              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
-              name="Row Count">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable to hold the row count."
-                  name="VariableName">User::errorsCount</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Validate Excel file\Row Count.Inputs[Row Count Input 1]"
-                  hasSideEffects="true"
-                  name="Row Count Input 1">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Validate Excel file\Row Count.Outputs[Row Count Output 1]"
-                  name="Row Count Output 1"
-                  synchronousInputId="Package\Validate Excel file\Row Count.Inputs[Row Count Input 1]">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\Validate Excel file.Paths[error]"
-              endId="Package\Validate Excel file\Row Count.Inputs[Row Count Input 1]"
-              name="error"
-              startId="Package\Validate Excel file\Conditional Split.Outputs[error]" />
-            <path
-              refId="Package\Validate Excel file.Paths[Excel Source Output]"
-              endId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input]"
-              name="Excel Source Output"
-              startId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Validate Excel file.Paths[Row Count Output 1]"
-              endId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input]"
-              name="Row Count Output 1"
-              startId="Package\Validate Excel file\Row Count.Outputs[Row Count Output 1]" />
+              startId="Package\Transaction to DB\Lookup by Customer.Outputs[Lookup Match Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint]"
-      DTS:CreationName=""
-      DTS:DTSID="{0AB9421E-0074-4762-A44D-9BB5A944510D}"
-      DTS:From="Package\Validate Excel file"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint"
-      DTS:To="Package\Categories to DB" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
@@ -4153,26 +3382,26 @@ where [refTable].[Name] = ?</property>
         <NodeLayout
           Size="160,42"
           Id="Package\Categories to DB"
-          TopLeft="630,116" />
+          TopLeft="623,83" />
         <NodeLayout
           Size="160,42"
           Id="Package\Customers to DB"
-          TopLeft="630,218" />
+          TopLeft="623,185" />
         <NodeLayout
           Size="151,42"
           Id="Package\Products to DB"
-          TopLeft="634.5,320" />
+          TopLeft="627.5,287" />
         <NodeLayout
           Size="192,42"
           Id="Package\Products to Transaction"
-          TopLeft="614,524" />
+          TopLeft="607,491" />
         <NodeLayout
           Size="165,42"
           Id="Package\Transaction to DB"
-          TopLeft="627.5,422" />
+          TopLeft="620.5,389" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="710,158">
+          TopLeft="703,125">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4194,7 +3423,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="710,260">
+          TopLeft="703,227">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4216,7 +3445,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="710,362">
+          TopLeft="703,329">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4238,7 +3467,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="710,464">
+          TopLeft="703,431">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4250,44 +3479,6 @@ where [refTable].[Name] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Validate Excel file"
-          TopLeft="619,2" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="700.5,44">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="9.5,72"
-              Start="0,0"
-              End="9.5,64.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32"
-                    Point2="0,36"
-                    Point3="4,36" />
-                  <mssgle:LineSegment
-                    End="5.5,36" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5.5,36"
-                    Point2="9.5,36"
-                    Point3="9.5,40" />
-                  <mssgle:LineSegment
-                    End="9.5,64.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4303,65 +3494,85 @@ where [refTable].[Name] = ?</property>
     design-time-name="Package\Categories to DB">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="141,42"
           Id="Package\Categories to DB\Excel Source"
-          TopLeft="14,13" />
+          TopLeft="33,12" />
         <NodeLayout
-          Size="129,42"
-          Id="Package\Categories to DB\Aggregate"
+          Size="227,42"
+          Id="Package\Categories to DB\Aggregate Categories by Name"
           TopLeft="14,107.5" />
         <NodeLayout
-          Size="146,42"
-          Id="Package\Categories to DB\To Categories"
-          TopLeft="5.50000000000003,209.5" />
+          Size="165,42"
+          Id="Package\Categories to DB\To Category table"
+          TopLeft="27.5,209.5" />
         <EdgeLayout
           Id="Package\Categories to DB.Paths[Excel Source Output]"
-          TopLeft="81.5,55">
+          TopLeft="103.5,54">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.5"
+              EndConnector="24,53.5"
               Start="0,0"
-              End="0,45">
+              End="24,46">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45" />
+                    End="0,22.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.75"
+                    Point2="0,26.75"
+                    Point3="4,26.75" />
+                  <mssgle:LineSegment
+                    End="20,26.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20,26.75"
+                    Point2="24,26.75"
+                    Point3="24,30.75" />
+                  <mssgle:LineSegment
+                    End="24,46" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Categories to DB.Paths[Aggregate Output 1]"
-          TopLeft="78.5,149.5">
+          TopLeft="127.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="-17.5,60"
               Start="0,0"
-              End="0,52.5">
+              End="-17.5,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="-4,30" />
+                  <mssgle:LineSegment
+                    End="-13.5,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.5,30"
+                    Point2="-17.5,30"
+                    Point3="-17.5,34" />
+                  <mssgle:LineSegment
+                    End="-17.5,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4384,14 +3595,14 @@ where [refTable].[Name] = ?</property>
     design-time-name="Package\Customers to DB">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="141,42"
           Id="Package\Customers to DB\Excel Source"
           TopLeft="34.5,17.5" />
         <NodeLayout
-          Size="129,42"
-          Id="Package\Customers to DB\Aggregate"
+          Size="227,42"
+          Id="Package\Customers to DB\Aggregate Customers by Name"
           TopLeft="46,107.5" />
         <NodeLayout
           Size="168,42"
@@ -4399,50 +3610,70 @@ where [refTable].[Name] = ?</property>
           TopLeft="26.5,209.5" />
         <EdgeLayout
           Id="Package\Customers to DB.Paths[Excel Source Output]"
-          TopLeft="107.75,59.5">
+          TopLeft="105,59.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48"
+              EndConnector="54.5,48"
               Start="0,0"
-              End="0,40.5">
+              End="54.5,40.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.5" />
+                    End="0,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20"
+                    Point2="0,24"
+                    Point3="4,24" />
+                  <mssgle:LineSegment
+                    End="50.5,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.5,24"
+                    Point2="54.5,24"
+                    Point3="54.5,28" />
+                  <mssgle:LineSegment
+                    End="54.5,40.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Customers to DB.Paths[Aggregate Output 1]"
-          TopLeft="110.5,149.5">
+          TopLeft="159.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="-49,60"
               Start="0,0"
-              End="0,52.5">
+              End="-49,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="-4,30" />
+                  <mssgle:LineSegment
+                    End="-45,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-45,30"
+                    Point2="-49,30"
+                    Point3="-49,34" />
+                  <mssgle:LineSegment
+                    End="-49,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4467,9 +3698,9 @@ where [refTable].[Name] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="109,42"
-          Id="Package\Products to DB\Sort 1"
-          TopLeft="186.5,311.5" />
+          Size="189,42"
+          Id="Package\Products to DB\Sort products by Name"
+          TopLeft="221.5,309.5" />
         <NodeLayout
           Size="122,42"
           Id="Package\Products to DB\Multicast"
@@ -4487,26 +3718,26 @@ where [refTable].[Name] = ?</property>
           Id="Package\Products to DB\Merge Join"
           TopLeft="175,413.5" />
         <NodeLayout
-          Size="100,42"
-          Id="Package\Products to DB\Sort"
+          Size="158,42"
+          Id="Package\Products to DB\Sort all by name"
           TopLeft="26,311.5" />
         <NodeLayout
-          Size="189,42"
-          Id="Package\Products to DB\Products with last date"
+          Size="285,42"
+          Id="Package\Products to DB\Aggregate Products by Name with last date"
           TopLeft="137.5,209.5" />
         <NodeLayout
-          Size="160,42"
-          Id="Package\Products to DB\Lookup Category"
+          Size="175,42"
+          Id="Package\Products to DB\Lookup by Category"
           TopLeft="161,515.5" />
         <EdgeLayout
           Id="Package\Products to DB.Paths[Sort Output1]"
-          TopLeft="76,353.5">
+          TopLeft="105,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="144.333333333333,60"
+              EndConnector="115.333333333333,60"
               Start="0,0"
-              End="144.333333333333,52.5">
+              End="115.333333333333,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -4517,13 +3748,13 @@ where [refTable].[Name] = ?</property>
                     Point2="0,35.5688622754491"
                     Point3="4,35.5688622754491" />
                   <mssgle:LineSegment
-                    End="140.333333333333,35.5688622754491" />
+                    End="111.333333333333,35.5688622754491" />
                   <mssgle:CubicBezierSegment
-                    Point1="140.333333333333,35.5688622754491"
-                    Point2="144.333333333333,35.5688622754491"
-                    Point3="144.333333333333,39.5688622754491" />
+                    Point1="111.333333333333,35.5688622754491"
+                    Point2="115.333333333333,35.5688622754491"
+                    Point3="115.333333333333,39.5688622754491" />
                   <mssgle:LineSegment
-                    End="144.333333333333,52.5" />
+                    End="115.333333333333,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4534,30 +3765,30 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Products to DB.Paths[Sort Output]"
-          TopLeft="241,353.5">
+          TopLeft="316,351.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="20.6666666666667,60"
+              EndConnector="-54.3333333333334,62"
               Start="0,0"
-              End="20.6666666666667,52.5">
+              End="-54.3333333333334,54.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5688622754491" />
+                    End="0,32.7544910179641" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.5688622754491"
-                    Point2="0,35.5688622754491"
-                    Point3="4,35.5688622754491" />
+                    Point1="0,32.7544910179641"
+                    Point2="0,36.7544910179641"
+                    Point3="-4,36.7544910179641" />
                   <mssgle:LineSegment
-                    End="16.6666666666667,35.5688622754491" />
+                    End="-50.3333333333334,36.7544910179641" />
                   <mssgle:CubicBezierSegment
-                    Point1="16.6666666666667,35.5688622754491"
-                    Point2="20.6666666666667,35.5688622754491"
-                    Point3="20.6666666666667,39.5688622754491" />
+                    Point1="-50.3333333333334,36.7544910179641"
+                    Point2="-54.3333333333334,36.7544910179641"
+                    Point3="-54.3333333333334,40.7544910179641" />
                   <mssgle:LineSegment
-                    End="20.6666666666667,52.5" />
+                    End="-54.3333333333334,54.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4572,9 +3803,9 @@ where [refTable].[Name] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="19,162"
+              EndConnector="48,162"
               Start="0,0"
-              End="19,154.5">
+              End="48,154.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -4585,13 +3816,13 @@ where [refTable].[Name] = ?</property>
                     Point2="0,66.0582524271845"
                     Point3="4,66.0582524271845" />
                   <mssgle:LineSegment
-                    End="15,66.0582524271845" />
+                    End="44,66.0582524271845" />
                   <mssgle:CubicBezierSegment
-                    Point1="15,66.0582524271845"
-                    Point2="19,66.0582524271845"
-                    Point3="19,70.0582524271845" />
+                    Point1="44,66.0582524271845"
+                    Point2="48,66.0582524271845"
+                    Point3="48,70.0582524271845" />
                   <mssgle:LineSegment
-                    End="19,154.5" />
+                    End="48,154.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4606,9 +3837,9 @@ where [refTable].[Name] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="137,60"
+              EndConnector="185,60"
               Start="0,0"
-              End="137,52.5">
+              End="185,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -4619,13 +3850,13 @@ where [refTable].[Name] = ?</property>
                     Point2="0,24.4660194174757"
                     Point3="4,24.4660194174757" />
                   <mssgle:LineSegment
-                    End="133,24.4660194174757" />
+                    End="181,24.4660194174757" />
                   <mssgle:CubicBezierSegment
-                    Point1="133,24.4660194174757"
-                    Point2="137,24.4660194174757"
-                    Point3="137,28.4660194174757" />
+                    Point1="181,24.4660194174757"
+                    Point2="185,24.4660194174757"
+                    Point3="185,28.4660194174757" />
                   <mssgle:LineSegment
-                    End="137,52.5" />
+                    End="185,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4636,7 +3867,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Products to DB.Paths[Merge Join Output]"
-          TopLeft="241,455.5">
+          TopLeft="244.75,455.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4658,7 +3889,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Products to DB.Paths[Lookup Match Output]"
-          TopLeft="241,557.5">
+          TopLeft="244.75,557.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4704,30 +3935,30 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Products to DB.Paths[Aggregate Output 1]"
-          TopLeft="232,251.5">
+          TopLeft="280,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="9,60"
+              EndConnector="36,58"
               Start="0,0"
-              End="9,52.5">
+              End="36,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26" />
+                    End="0,25" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="4,30" />
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="4,29" />
                   <mssgle:LineSegment
-                    End="5,30" />
+                    End="32,29" />
                   <mssgle:CubicBezierSegment
-                    Point1="5,30"
-                    Point2="9,30"
-                    Point3="9,34" />
+                    Point1="32,29"
+                    Point2="36,29"
+                    Point3="36,33" />
                   <mssgle:LineSegment
-                    End="9,52.5" />
+                    End="36,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4762,20 +3993,20 @@ where [refTable].[Name] = ?</property>
           Id="Package\Products to Transaction\To TransactionProduct"
           TopLeft="5.50000000000003,311.5" />
         <NodeLayout
-          Size="165,42"
-          Id="Package\Products to Transaction\Lookup ProductID"
+          Size="169,42"
+          Id="Package\Products to Transaction\Lookup by Product"
           TopLeft="16.5,107.5" />
         <NodeLayout
           Size="141,42"
           Id="Package\Products to Transaction\Excel Source"
           TopLeft="26.5,14.5" />
         <NodeLayout
-          Size="184,42"
-          Id="Package\Products to Transaction\Lookup TransactionID"
+          Size="191,42"
+          Id="Package\Products to Transaction\Lookup  by Transaction"
           TopLeft="7.00000000000003,209.5" />
         <EdgeLayout
           Id="Package\Products to Transaction.Paths[Lookup Match Output]"
-          TopLeft="99,251.5">
+          TopLeft="100.75,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4799,7 +4030,7 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Products to Transaction.Paths[Excel Source Output]"
-          TopLeft="98,56.5">
+          TopLeft="99,56.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4816,14 +4047,12 @@ where [refTable].[Name] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Products to Transaction.Paths[Lookup Match Output1]"
-          TopLeft="99,149.5">
+          TopLeft="101.75,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4862,7 +4091,7 @@ where [refTable].[Name] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Products to Transaction\Lookup TransactionID">
+    design-time-name="Package\Products to Transaction\Lookup  by Transaction">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -4879,113 +4108,109 @@ where [refTable].[Name] = ?</property>
         <NodeLayout
           Size="180,42"
           Id="Package\Transaction to DB\To Transaction Table"
-          TopLeft="5.50000000000003,311.5" />
+          TopLeft="153.5,325.5" />
         <NodeLayout
-          Size="129,42"
-          Id="Package\Transaction to DB\Aggregate"
-          TopLeft="31,209.5" />
+          Size="189,42"
+          Id="Package\Transaction to DB\Aggregate transactions"
+          TopLeft="158,216.5" />
         <NodeLayout
           Size="141,42"
           Id="Package\Transaction to DB\Excel Source"
           TopLeft="196.5,8.5" />
         <NodeLayout
-          Size="174,42"
-          Id="Package\Transaction to DB\Lookup CustomerID"
-          TopLeft="198.5,107.5" />
+          Size="178,42"
+          Id="Package\Transaction to DB\Lookup by Customer"
+          TopLeft="174.5,105.5" />
         <EdgeLayout
           Id="Package\Transaction to DB.Paths[Lookup Match Output]"
-          TopLeft="257.833333333333,149.5">
+          TopLeft="263.5,147.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-162.333333333333,60"
+              EndConnector="-11,69"
               Start="0,0"
-              End="-162.333333333333,52.5">
+              End="-11,61.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.3280182232346" />
+                    End="0,30.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.3280182232346"
-                    Point2="0,24.3280182232346"
-                    Point3="-4,24.3280182232346" />
+                    Point1="0,30.5"
+                    Point2="0,34.5"
+                    Point3="-4,34.5" />
                   <mssgle:LineSegment
-                    End="-158.333333333333,24.3280182232346" />
+                    End="-7,34.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-158.333333333333,24.3280182232346"
-                    Point2="-162.333333333333,24.3280182232346"
-                    Point3="-162.333333333333,28.3280182232346" />
+                    Point1="-7,34.5"
+                    Point2="-11,34.5"
+                    Point3="-11,38.5" />
                   <mssgle:LineSegment
-                    End="-162.333333333333,52.5" />
+                    End="-11,61.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-129.358053385416,29.3280182232346,96.3827734375,11.609375"
+              BoundingBox="-53.69138671875,39.5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Transaction to DB.Paths[Excel Source Output]"
-          TopLeft="267,50.5">
+          TopLeft="265.25,50.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="18.5,57"
+              EndConnector="0,55"
               Start="0,0"
-              End="18.5,49.5">
+              End="0,47.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.5"
-                    Point2="0,28.5"
-                    Point3="4,28.5" />
-                  <mssgle:LineSegment
-                    End="14.5,28.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="14.5,28.5"
-                    Point2="18.5,28.5"
-                    Point3="18.5,32.5" />
-                  <mssgle:LineSegment
-                    End="18.5,49.5" />
+                    End="0,47.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Transaction to DB.Paths[Aggregate Output 1]"
-          TopLeft="95.5,251.5">
+          TopLeft="252.5,258.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="-8.99999999999997,67"
               Start="0,0"
-              End="0,52.5">
+              End="-8.99999999999997,59.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.5"
+                    Point2="0,33.5"
+                    Point3="-4,33.5" />
+                  <mssgle:LineSegment
+                    End="-4.99999999999997,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.99999999999997,33.5"
+                    Point2="-8.99999999999997,33.5"
+                    Point3="-8.99999999999997,37.5" />
+                  <mssgle:LineSegment
+                    End="-8.99999999999997,59.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5018,7 +4243,7 @@ where [refTable].[Name] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Transaction to DB\Lookup CustomerID">
+    design-time-name="Package\Transaction to DB\Lookup by Customer">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -5040,97 +4265,5 @@ where [refTable].[Name] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Validate Excel file">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Validate Excel file\Row Count"
-          TopLeft="26.5,209.5" />
-        <NodeLayout
-          Size="174,42"
-          Id="Package\Validate Excel file\Flat File Destination"
-          TopLeft="5.50000000000003,311.5" />
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Validate Excel file\Conditional Split"
-          TopLeft="19,103.5" />
-        <NodeLayout
-          Size="141,42"
-          Id="Package\Validate Excel file\Excel Source"
-          TopLeft="22,5.5" />
-        <EdgeLayout
-          Id="Package\Validate Excel file.Paths[Row Count Output 1]"
-          TopLeft="92.5,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Validate Excel file.Paths[Excel Source Output]"
-          TopLeft="95,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,56"
-              Start="0,0"
-              End="0,48.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Validate Excel file.Paths[error]"
-          TopLeft="95,145.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,64"
-              Start="0,0"
-              End="0,56.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,56.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-11.57830078125,24.37158203125,23.1566015625,7.7568359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
