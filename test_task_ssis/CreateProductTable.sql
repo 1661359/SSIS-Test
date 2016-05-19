@@ -1,8 +1,8 @@
 CREATE TABLE [dbo].[Product](
-	[ProductID] [int] IDENTITY(1,1) NOT NULL,
+	[ProductID] [uniqueidentifier] DEFAULT (newsequentialid()) NOT NULL,
 	[Name] [nvarchar](255) NOT NULL,
 	[Price] [float] NOT NULL,
-	[CategoryID] [int] NOT NULL,
+	[CategoryID] [uniqueidentifier] NOT NULL,
  CONSTRAINT [PK_Product] PRIMARY KEY CLUSTERED 
 (
 	[ProductID] ASC

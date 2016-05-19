@@ -1,6 +1,6 @@
 CREATE TABLE [dbo].[TransactionProduct](
-	[TransactionID] [int] NOT NULL,
-	[ProductID] [int] NOT NULL,
+	[TransactionID] [uniqueidentifier] NOT NULL,
+	[ProductID] [uniqueidentifier] NOT NULL,
  CONSTRAINT [PK_TransactionProduct] PRIMARY KEY CLUSTERED 
 (
 	[TransactionID] ASC,

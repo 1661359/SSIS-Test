@@ -5,7 +5,6 @@
       <Name>Development</Name>
       <Options>
         <StartObjectID>Startup.dtsx</StartObjectID>
-        <Run64BitRuntime>true</Run64BitRuntime>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>

@@ -11,10 +11,99 @@
   DTS:LocaleID="1049"
   DTS:ObjectName="LoadDataToDb"
   DTS:PackageType="5"
-  DTS:VersionBuild="67"
-  DTS:VersionGUID="{FF70C6AE-741C-4EAB-A6F5-E3C5FC06680D}">
+  DTS:VersionBuild="81"
+  DTS:VersionGUID="{D23F6503-0CFD-4319-A022-5068B9CBF96D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{73BB0202-D629-4FFA-9390-F8290F899178}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1049"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1251"
+          DTS:ConnectionString="D:\11.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product"
+              DTS:DTSID="{665A9D40-1C71-418F-AFAD-226782EC47F9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Region"
+              DTS:DTSID="{C9BD6837-1905-4839-B908-31426A44E49C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer"
+              DTS:DTSID="{6FEC2D80-9A81-4294-A6E3-9474F5898317}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{D0EA022E-60E6-442C-9A24-1A5535B48E9D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="72"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{52CDCE69-EE53-4390-8262-A8B2E687D890}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="72"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{4A20C11D-EF58-4B4B-A8C5-90CCC25439F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{03FA5FF1-0B75-435E-BC3C-3FF860B675BF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{4C93FB1F-F25E-4BC7-9CFF-3C5449085AD6}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
@@ -374,7 +463,7 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Categories to DB\To Category table.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
-                      dataType="i4"
+                      dataType="guid"
                       name="CategoryID" />
                     <externalMetadataColumn
                       refId="Package\Categories to DB\To Category table.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
@@ -1218,7 +1307,7 @@ where [refTable].[Name] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CategoryID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CategoryID" dataType="DT_GUID" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -1277,7 +1366,7 @@ where [refTable].[Name] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Products to DB\Lookup by Category.Outputs[Lookup Match Output].Columns[CategoryID]"
-                      dataType="i4"
+                      dataType="guid"
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\Products to DB\Lookup by Category.Outputs[Lookup Match Output].Columns[CategoryID]"
                       name="CategoryID"
@@ -1850,7 +1939,7 @@ where [refTable].[Name] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Products to DB\To Product Table.Inputs[OLE DB Destination Input].Columns[CategoryID]"
-                      cachedDataType="i4"
+                      cachedDataType="guid"
                       cachedName="CategoryID"
                       externalMetadataColumnId="Package\Products to DB\To Product Table.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
                       lineageId="Package\Products to DB\Lookup by Category.Outputs[Lookup Match Output].Columns[CategoryID]" />
@@ -1878,7 +1967,7 @@ where [refTable].[Name] = ?</property>
                       name="Name" />
                     <externalMetadataColumn
                       refId="Package\Products to DB\To Product Table.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
-                      dataType="i4"
+                      dataType="guid"
                       name="ProductID" />
                     <externalMetadataColumn
                       refId="Package\Products to DB\To Product Table.Inputs[OLE DB Destination Input].ExternalColumns[Price]"
@@ -1886,7 +1975,7 @@ where [refTable].[Name] = ?</property>
                       name="Price" />
                     <externalMetadataColumn
                       refId="Package\Products to DB\To Product Table.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
-                      dataType="i4"
+                      dataType="guid"
                       name="CategoryID" />
                   </externalMetadataColumns>
                 </input>
@@ -2040,13 +2129,33 @@ where [refTable].[Name] = ?</property>
                       name="Product"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]"
-                      dataType="i4"
+                      refId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Region]"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[TransactionId]"
-                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]"
-                      name="TransactionId"
+                      externalMetadataColumnId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[Region]"
+                      length="255"
+                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Region]"
+                      name="Region"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Customer]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[Customer]"
+                      length="255"
+                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Customer]"
+                      name="Customer"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Date]"
+                      name="Date"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -2136,21 +2245,33 @@ where [refTable].[Name] = ?</property>
                       lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Error Output].Columns[Product]"
                       name="Product" />
                     <outputColumn
-                      refId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Error Output].Columns[TransactionId]"
-                      dataType="r8"
-                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Error Output].Columns[TransactionId]"
-                      name="TransactionId" />
+                      refId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Error Output].Columns[Region]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Error Output].Columns[Region]"
+                      name="Region" />
+                    <outputColumn
+                      refId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Error Output].Columns[Customer]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Error Output].Columns[Customer]"
+                      name="Customer" />
+                    <outputColumn
+                      refId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Error Output].Columns[Date]"
+                      dataType="date"
+                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Error Output].Columns[Date]"
+                      name="Date" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
               </outputs>
             </component>
             <component
-              refId="Package\Products to Transaction\Lookup  by Transaction"
+              refId="Package\Products to Transaction\Lookup by Customer"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup  by Transaction"
+              name="Lookup by Customer"
               usesDispositions="true"
               version="6">
               <properties>
@@ -2159,14 +2280,14 @@ where [refTable].[Name] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Transaction]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Customer]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Transaction]) [refTable]
-where [refTable].[InternalID] = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Customer]) [refTable]
+where [refTable].[Name] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -2181,7 +2302,7 @@ where [refTable].[InternalID] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">1</property>
+                  typeConverter="LookupNoMatchBehavior">0</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -2197,12 +2318,12 @@ where [refTable].[InternalID] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="TransactionID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="InternalID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Region" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CustomerID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CustomerID" dataType="DT_GUID" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]};</property>
+                  name="ParameterMap">#{Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Customer]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2214,7 +2335,7 @@ where [refTable].[InternalID] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Products to Transaction\Lookup  by Transaction.Connections[OleDbConnection]"
+                  refId="Package\Products to Transaction\Lookup by Customer.Connections[OleDbConnection]"
                   connectionManagerID="{21A3F4AB-3909-4ACA-8A51-D42DA4BC6F6E}:external"
                   connectionManagerRefId="Project.ConnectionManagers[DbConnection]"
                   description="Connection manager used to access lookup data."
@@ -2222,19 +2343,20 @@ where [refTable].[InternalID] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Products to Transaction\Lookup  by Transaction.Inputs[Lookup Input]"
+                  refId="Package\Products to Transaction\Lookup by Customer.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Products to Transaction\Lookup  by Transaction.Inputs[Lookup Input].Columns[TransactionId]"
-                      cachedDataType="i4"
-                      cachedName="TransactionId"
-                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]">
+                      refId="Package\Products to Transaction\Lookup by Customer.Inputs[Lookup Input].Columns[Customer]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Customer"
+                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Customer]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">InternalID</property>
+                          name="JoinToReferenceColumn">Name</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -2247,54 +2369,55 @@ where [refTable].[InternalID] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Match Output]"
+                  refId="Package\Products to Transaction\Lookup by Customer.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Products to Transaction\Lookup  by Transaction.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Products to Transaction\Lookup by Customer.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Match Output].Columns[TransactionID]"
-                      dataType="i4"
+                      refId="Package\Products to Transaction\Lookup by Customer.Outputs[Lookup Match Output].Columns[CustomerID]"
+                      dataType="guid"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Match Output].Columns[TransactionID]"
-                      name="TransactionID"
+                      lineageId="Package\Products to Transaction\Lookup by Customer.Outputs[Lookup Match Output].Columns[CustomerID]"
+                      name="CustomerID"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">TransactionID</property>
+                          name="CopyFromReferenceColumn">CustomerID</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup No Match Output]"
+                  refId="Package\Products to Transaction\Lookup by Customer.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Products to Transaction\Lookup  by Transaction.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Products to Transaction\Lookup by Customer.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Error Output]"
+                  refId="Package\Products to Transaction\Lookup by Customer.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Products to Transaction\Lookup  by Transaction.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Products to Transaction\Lookup by Customer.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Products to Transaction\Lookup by Customer.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Products to Transaction\Lookup by Customer.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Products to Transaction\Lookup by Customer.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Products to Transaction\Lookup by Customer.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2354,12 +2477,12 @@ where [refTable].[Name] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Price" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CategoryID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductID" dataType="DT_GUID" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Price" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CategoryID" dataType="DT_GUID" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Products to Transaction\183:invalid};</property>
+                  name="ParameterMap">#{Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Product]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2413,7 +2536,7 @@ where [refTable].[Name] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Match Output].Columns[ProductID]"
-                      dataType="i4"
+                      dataType="guid"
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Match Output].Columns[ProductID]"
                       name="ProductID"
@@ -2453,6 +2576,197 @@ where [refTable].[Name] = ?</property>
                       refId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Products to Transaction\Lookup by Transaction"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup by Transaction"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Transaction]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Transaction]) [refTable]
+where [refTable].[Region] = ? and [refTable].[Date] = ? and [refTable].[CustomerID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="TransactionID" dataType="DT_GUID" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Region" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CustomerID" dataType="DT_GUID" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Region]};#{Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Date]};#{Package\Products to Transaction\Lookup by Customer.Outputs[Lookup Match Output].Columns[CustomerID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Products to Transaction\Lookup by Transaction.Connections[OleDbConnection]"
+                  connectionManagerID="{21A3F4AB-3909-4ACA-8A51-D42DA4BC6F6E}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DbConnection]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Products to Transaction\Lookup by Transaction.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Products to Transaction\Lookup by Transaction.Inputs[Lookup Input].Columns[Region]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Region"
+                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Region]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Region</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Products to Transaction\Lookup by Transaction.Inputs[Lookup Input].Columns[CustomerID]"
+                      cachedDataType="guid"
+                      cachedName="CustomerID"
+                      lineageId="Package\Products to Transaction\Lookup by Customer.Outputs[Lookup Match Output].Columns[CustomerID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CustomerID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Products to Transaction\Lookup by Transaction.Inputs[Lookup Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Date]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Date</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Products to Transaction\Lookup by Transaction.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Products to Transaction\Lookup by Transaction.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Products to Transaction\Lookup by Transaction.Outputs[Lookup Match Output].Columns[TransactionID]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Products to Transaction\Lookup by Transaction.Outputs[Lookup Match Output].Columns[TransactionID]"
+                      name="TransactionID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">TransactionID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Products to Transaction\Lookup by Transaction.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Products to Transaction\Lookup by Transaction.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Products to Transaction\Lookup by Transaction.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Products to Transaction\Lookup by Transaction.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Products to Transaction\Lookup by Transaction.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Products to Transaction\Lookup by Transaction.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Products to Transaction\Lookup by Transaction.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Products to Transaction\Lookup by Transaction.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2534,26 +2848,26 @@ where [refTable].[Name] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input].Columns[ProductID]"
-                      cachedDataType="i4"
+                      cachedDataType="guid"
                       cachedName="ProductID"
                       externalMetadataColumnId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
                       lineageId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Match Output].Columns[ProductID]" />
                     <inputColumn
                       refId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input].Columns[TransactionID]"
-                      cachedDataType="i4"
+                      cachedDataType="guid"
                       cachedName="TransactionID"
                       externalMetadataColumnId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input].ExternalColumns[TransactionID]"
-                      lineageId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Match Output].Columns[TransactionID]" />
+                      lineageId="Package\Products to Transaction\Lookup by Transaction.Outputs[Lookup Match Output].Columns[TransactionID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input].ExternalColumns[TransactionID]"
-                      dataType="i4"
+                      dataType="guid"
                       name="TransactionID" />
                     <externalMetadataColumn
                       refId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
-                      dataType="i4"
+                      dataType="guid"
                       name="ProductID" />
                   </externalMetadataColumns>
                 </input>
@@ -2592,14 +2906,19 @@ where [refTable].[Name] = ?</property>
               startId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output]" />
             <path
               refId="Package\Products to Transaction.Paths[Lookup Match Output]"
-              endId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input]"
-              name="Lookup Match Output"
-              startId="Package\Products to Transaction\Lookup  by Transaction.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Products to Transaction.Paths[Lookup Match Output1]"
-              endId="Package\Products to Transaction\Lookup  by Transaction.Inputs[Lookup Input]"
+              endId="Package\Products to Transaction\Lookup by Customer.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Products to Transaction\Lookup by Product.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Products to Transaction.Paths[Lookup Match Output1]"
+              endId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Products to Transaction\Lookup by Transaction.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Products to Transaction.Paths[Lookup Match Output2]"
+              endId="Package\Products to Transaction\Lookup by Transaction.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Products to Transaction\Lookup by Customer.Outputs[Lookup Match Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2655,13 +2974,8 @@ where [refTable].[Name] = ?</property>
                   name="Aggregate Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Transaction to DB\Aggregate transactions.Inputs[Aggregate Input 1].Columns[TransactionId]"
-                      cachedDataType="r8"
-                      cachedName="TransactionId"
-                      lineageId="Package\Transaction to DB\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]" />
-                    <inputColumn
                       refId="Package\Transaction to DB\Aggregate transactions.Inputs[Aggregate Input 1].Columns[CustomerID]"
-                      cachedDataType="i4"
+                      cachedDataType="guid"
                       cachedName="CustomerID"
                       lineageId="Package\Transaction to DB\Lookup by Customer.Outputs[Lookup Match Output].Columns[CustomerID]" />
                     <inputColumn
@@ -2696,32 +3010,6 @@ where [refTable].[Name] = ?</property>
                   </properties>
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[TransactionId]"
-                      dataType="r8"
-                      lineageId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[TransactionId]"
-                      name="TransactionId">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Transaction to DB\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[Region]"
                       dataType="wstr"
                       length="255"
@@ -2750,7 +3038,7 @@ where [refTable].[Name] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[CustomerID]"
-                      dataType="i4"
+                      dataType="guid"
                       lineageId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[CustomerID]"
                       name="CustomerID">
                       <properties>
@@ -2789,7 +3077,7 @@ where [refTable].[Name] = ?</property>
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
                           name="AggregationType"
-                          typeConverter="AggregationType">7</property>
+                          typeConverter="AggregationType">0</property>
                         <property
                           dataType="System.Int32"
                           description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
@@ -3056,7 +3344,7 @@ where [refTable].[Name] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CustomerID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CustomerID" dataType="DT_GUID" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -3115,7 +3403,7 @@ where [refTable].[Name] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Transaction to DB\Lookup by Customer.Outputs[Lookup Match Output].Columns[CustomerID]"
-                      dataType="i4"
+                      dataType="guid"
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\Transaction to DB\Lookup by Customer.Outputs[Lookup Match Output].Columns[CustomerID]"
                       name="CustomerID"
@@ -3243,16 +3531,10 @@ where [refTable].[Name] = ?</property>
                       lineageId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[Region]" />
                     <inputColumn
                       refId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].Columns[CustomerID]"
-                      cachedDataType="i4"
+                      cachedDataType="guid"
                       cachedName="CustomerID"
                       externalMetadataColumnId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
                       lineageId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[CustomerID]" />
-                    <inputColumn
-                      refId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].Columns[TransactionId]"
-                      cachedDataType="r8"
-                      cachedName="TransactionId"
-                      externalMetadataColumnId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].ExternalColumns[InternalID]"
-                      lineageId="Package\Transaction to DB\Aggregate transactions.Outputs[Aggregate Output 1].Columns[TransactionId]" />
                     <inputColumn
                       refId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].Columns[Date]"
                       cachedDataType="date"
@@ -3264,16 +3546,12 @@ where [refTable].[Name] = ?</property>
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].ExternalColumns[TransactionID]"
-                      dataType="i4"
+                      dataType="guid"
                       name="TransactionID" />
                     <externalMetadataColumn
                       refId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
-                      dataType="i4"
+                      dataType="guid"
                       name="CustomerID" />
-                    <externalMetadataColumn
-                      refId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].ExternalColumns[InternalID]"
-                      dataType="i4"
-                      name="InternalID" />
                     <externalMetadataColumn
                       refId="Package\Transaction to DB\To Transaction Table.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
                       dataType="wstr"
@@ -3591,6 +3869,19 @@ where [refTable].[Name] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Categories to DB\To Category table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Customers to DB">
     <LayoutInfo>
@@ -3718,10 +4009,6 @@ where [refTable].[Name] = ?</property>
           Id="Package\Products to DB\Merge Join"
           TopLeft="175,413.5" />
         <NodeLayout
-          Size="158,42"
-          Id="Package\Products to DB\Sort all by name"
-          TopLeft="26,311.5" />
-        <NodeLayout
           Size="285,42"
           Id="Package\Products to DB\Aggregate Products by Name with last date"
           TopLeft="137.5,209.5" />
@@ -3729,40 +4016,6 @@ where [refTable].[Name] = ?</property>
           Size="175,42"
           Id="Package\Products to DB\Lookup by Category"
           TopLeft="161,515.5" />
-        <EdgeLayout
-          Id="Package\Products to DB.Paths[Sort Output1]"
-          TopLeft="105,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="115.333333333333,60"
-              Start="0,0"
-              End="115.333333333333,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5688622754491" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5688622754491"
-                    Point2="0,35.5688622754491"
-                    Point3="4,35.5688622754491" />
-                  <mssgle:LineSegment
-                    End="111.333333333333,35.5688622754491" />
-                  <mssgle:CubicBezierSegment
-                    Point1="111.333333333333,35.5688622754491"
-                    Point2="115.333333333333,35.5688622754491"
-                    Point3="115.333333333333,39.5688622754491" />
-                  <mssgle:LineSegment
-                    End="115.333333333333,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Products to DB.Paths[Sort Output]"
           TopLeft="316,351.5">
@@ -3789,40 +4042,6 @@ where [refTable].[Name] = ?</property>
                     Point3="-54.3333333333334,40.7544910179641" />
                   <mssgle:LineSegment
                     End="-54.3333333333334,54.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Products to DB.Paths[Multicast Output 2]"
-          TopLeft="57,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="48,162"
-              Start="0,0"
-              End="48,154.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,62.0582524271845" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,62.0582524271845"
-                    Point2="0,66.0582524271845"
-                    Point3="4,66.0582524271845" />
-                  <mssgle:LineSegment
-                    End="44,66.0582524271845" />
-                  <mssgle:CubicBezierSegment
-                    Point1="44,66.0582524271845"
-                    Point2="48,66.0582524271845"
-                    Point3="48,70.0582524271845" />
-                  <mssgle:LineSegment
-                    End="48,154.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3967,9 +4186,94 @@ where [refTable].[Name] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Products to DB\Sort all by name"
+          TopLeft="26,311.5" />
+        <EdgeLayout
+          Id="Package\Products to DB.Paths[Multicast Output 2]"
+          TopLeft="57,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48,162"
+              Start="0,0"
+              End="48,154.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.0582524271845" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,62.0582524271845"
+                    Point2="0,66.0582524271845"
+                    Point3="4,66.0582524271845" />
+                  <mssgle:LineSegment
+                    End="44,66.0582524271845" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44,66.0582524271845"
+                    Point2="48,66.0582524271845"
+                    Point3="48,70.0582524271845" />
+                  <mssgle:LineSegment
+                    End="48,154.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Products to DB.Paths[Sort Output1]"
+          TopLeft="105,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="115.333333333333,60"
+              Start="0,0"
+              End="115.333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5688622754491" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5688622754491"
+                    Point2="0,35.5688622754491"
+                    Point3="4,35.5688622754491" />
+                  <mssgle:LineSegment
+                    End="111.333333333333,35.5688622754491" />
+                  <mssgle:CubicBezierSegment
+                    Point1="111.333333333333,35.5688622754491"
+                    Point2="115.333333333333,35.5688622754491"
+                    Point3="115.333333333333,39.5688622754491" />
+                  <mssgle:LineSegment
+                    End="115.333333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Products to DB\To Product Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Products to DB\Excel Source">
     <Properties>
@@ -3983,54 +4287,32 @@ where [refTable].[Name] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Products to DB\Lookup by Category">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Products to Transaction">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="187,42"
           Id="Package\Products to Transaction\To TransactionProduct"
-          TopLeft="5.50000000000003,311.5" />
+          TopLeft="16.5,413.5" />
         <NodeLayout
           Size="169,42"
           Id="Package\Products to Transaction\Lookup by Product"
-          TopLeft="16.5,107.5" />
-        <NodeLayout
-          Size="141,42"
-          Id="Package\Products to Transaction\Excel Source"
-          TopLeft="26.5,14.5" />
-        <NodeLayout
-          Size="191,42"
-          Id="Package\Products to Transaction\Lookup  by Transaction"
-          TopLeft="7.00000000000003,209.5" />
-        <EdgeLayout
-          Id="Package\Products to Transaction.Paths[Lookup Match Output]"
-          TopLeft="100.75,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="27.5,107.5" />
         <EdgeLayout
           Id="Package\Products to Transaction.Paths[Excel Source Output]"
-          TopLeft="99,56.5">
+          TopLeft="111,56.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4050,33 +4332,116 @@ where [refTable].[Name] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Products to Transaction\Excel Source"
+          TopLeft="37.5,14.5" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Products to Transaction\Lookup by Customer"
+          TopLeft="22,203" />
         <EdgeLayout
-          Id="Package\Products to Transaction.Paths[Lookup Match Output1]"
-          TopLeft="101.75,149.5">
+          Id="Package\Products to Transaction.Paths[Lookup Match Output]"
+          TopLeft="111.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,53.5"
               Start="0,0"
-              End="0,52.5">
+              End="0,46">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,46" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,17.1953125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Products to Transaction\Lookup by Transaction"
+          TopLeft="21,276" />
+        <EdgeLayout
+          Id="Package\Products to Transaction.Paths[Lookup Match Output1]"
+          TopLeft="112.5,318">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,95.5"
+              Start="0,0"
+              End="0,88">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,88" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,38.1953125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Products to Transaction.Paths[Lookup Match Output2]"
+          TopLeft="113,245">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,5.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Products to Transaction\To TransactionProduct">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Products to Transaction\Lookup by Product">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Products to Transaction\Excel Source">
     <Properties>
@@ -4090,16 +4455,6 @@ where [refTable].[Name] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Products to Transaction\Lookup  by Transaction">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Transaction to DB">
     <LayoutInfo>
@@ -4108,11 +4463,11 @@ where [refTable].[Name] = ?</property>
         <NodeLayout
           Size="180,42"
           Id="Package\Transaction to DB\To Transaction Table"
-          TopLeft="153.5,325.5" />
+          TopLeft="175.5,327.5" />
         <NodeLayout
           Size="189,42"
           Id="Package\Transaction to DB\Aggregate transactions"
-          TopLeft="158,216.5" />
+          TopLeft="167,217.5" />
         <NodeLayout
           Size="141,42"
           Id="Package\Transaction to DB\Excel Source"
@@ -4123,37 +4478,25 @@ where [refTable].[Name] = ?</property>
           TopLeft="174.5,105.5" />
         <EdgeLayout
           Id="Package\Transaction to DB.Paths[Lookup Match Output]"
-          TopLeft="263.5,147.5">
+          TopLeft="262.5,147.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-11,69"
+              EndConnector="0,70"
               Start="0,0"
-              End="-11,61.5">
+              End="0,62.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30.5"
-                    Point2="0,34.5"
-                    Point3="-4,34.5" />
-                  <mssgle:LineSegment
-                    End="-7,34.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-7,34.5"
-                    Point2="-11,34.5"
-                    Point3="-11,38.5" />
-                  <mssgle:LineSegment
-                    End="-11,61.5" />
+                    End="0,62.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-53.69138671875,39.5,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,25.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4181,30 +4524,18 @@ where [refTable].[Name] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Transaction to DB.Paths[Aggregate Output 1]"
-          TopLeft="252.5,258.5">
+          TopLeft="263.5,259.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-8.99999999999997,67"
+              EndConnector="0,68"
               Start="0,0"
-              End="-8.99999999999997,59.5">
+              End="0,60.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.5"
-                    Point2="0,33.5"
-                    Point3="-4,33.5" />
-                  <mssgle:LineSegment
-                    End="-4.99999999999997,33.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.99999999999997,33.5"
-                    Point2="-8.99999999999997,33.5"
-                    Point3="-8.99999999999997,37.5" />
-                  <mssgle:LineSegment
-                    End="-8.99999999999997,59.5" />
+                    End="0,60.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4248,7 +4579,7 @@ where [refTable].[Name] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4259,6 +4590,52 @@ where [refTable].[Name] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Products to Transaction\Lookup by Customer">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Customer]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Products to Transaction\Lookup by Transaction">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Transaction]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

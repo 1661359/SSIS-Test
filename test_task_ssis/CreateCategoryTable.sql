@@ -1,5 +1,5 @@
 CREATE TABLE [dbo].[Category](
-	[CategoryID] [int] IDENTITY(1,1) NOT NULL,
+	[CategoryID] [uniqueidentifier] DEFAULT (newsequentialid()) NOT NULL,
 	[Name] [nvarchar](255) NOT NULL,
  CONSTRAINT [PK_Category] PRIMARY KEY CLUSTERED 
 (

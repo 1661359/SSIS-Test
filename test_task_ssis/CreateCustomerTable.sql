@@ -1,5 +1,5 @@
 CREATE TABLE [dbo].[Customer](
-	[CustomerID] [int] IDENTITY(1,1) ,
+	[CustomerID] [uniqueidentifier] DEFAULT (newsequentialid()) NOT NULL,
 	[Name] [nvarchar](255) NOT NULL,
  CONSTRAINT [PK_Customer] PRIMARY KEY CLUSTERED 
 (

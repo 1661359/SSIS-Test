@@ -1,8 +1,7 @@
 CREATE TABLE [dbo].[Transaction](
-	[TransactionID] [int] IDENTITY(1,1) NOT NULL,
-	[InternalID] [int] NOT NULL,
+	[TransactionID] [uniqueidentifier] DEFAULT (newsequentialid()) NOT NULL,
 	[Region] [nvarchar](255)  NOT NULL,
-	[CustomerID] [int] NOT NULL,
+	[CustomerID] [uniqueidentifier] NOT NULL,
 	[Date] [date] NOT NULL,
  CONSTRAINT [PK_Transaction] PRIMARY KEY CLUSTERED 
 (
