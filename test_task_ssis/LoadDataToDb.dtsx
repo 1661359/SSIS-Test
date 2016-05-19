@@ -11,8 +11,8 @@
   DTS:LocaleID="1049"
   DTS:ObjectName="LoadDataToDb"
   DTS:PackageType="5"
-  DTS:VersionBuild="81"
-  DTS:VersionGUID="{D23F6503-0CFD-4319-A022-5068B9CBF96D}">
+  DTS:VersionBuild="84"
+  DTS:VersionGUID="{0AD1FAB5-E89B-47F3-8DCD-944060601D2C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2157,6 +2157,15 @@ where [refTable].[Name] = ?</property>
                       lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Date]"
                       name="Date"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Price]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[Price]"
+                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Price]"
+                      name="Price"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2261,6 +2270,11 @@ where [refTable].[Name] = ?</property>
                       dataType="date"
                       lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Error Output].Columns[Date]"
                       name="Date" />
+                    <outputColumn
+                      refId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Error Output].Columns[Price]"
+                      dataType="r8"
+                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Error Output].Columns[Price]"
+                      name="Price" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -2858,6 +2872,12 @@ where [refTable].[Region] = ? and [refTable].[Date] = ? and [refTable].[Customer
                       cachedName="TransactionID"
                       externalMetadataColumnId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input].ExternalColumns[TransactionID]"
                       lineageId="Package\Products to Transaction\Lookup by Transaction.Outputs[Lookup Match Output].Columns[TransactionID]" />
+                    <inputColumn
+                      refId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input].Columns[Price]"
+                      cachedDataType="r8"
+                      cachedName="Price"
+                      externalMetadataColumnId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input].ExternalColumns[Price]"
+                      lineageId="Package\Products to Transaction\Excel Source.Outputs[Excel Source Output].Columns[Price]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2869,6 +2889,10 @@ where [refTable].[Region] = ? and [refTable].[Date] = ? and [refTable].[Customer
                       refId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
                       dataType="guid"
                       name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\Products to Transaction\To TransactionProduct.Inputs[OLE DB Destination Input].ExternalColumns[Price]"
+                      dataType="r8"
+                      name="Price" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -4305,7 +4329,7 @@ where [refTable].[Name] = ?</property>
         <NodeLayout
           Size="187,42"
           Id="Package\Products to Transaction\To TransactionProduct"
-          TopLeft="16.5,413.5" />
+          TopLeft="17.5,445.5" />
         <NodeLayout
           Size="169,42"
           Id="Package\Products to Transaction\Lookup by Product"
@@ -4370,25 +4394,25 @@ where [refTable].[Name] = ?</property>
           TopLeft="21,276" />
         <EdgeLayout
           Id="Package\Products to Transaction.Paths[Lookup Match Output1]"
-          TopLeft="112.5,318">
+          TopLeft="113,318">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,95.5"
+              EndConnector="0,127.5"
               Start="0,0"
-              End="0,88">
+              End="0,120">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,88" />
+                    End="0,120" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,38.1953125,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,54.1953125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
