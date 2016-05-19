@@ -6,13 +6,14 @@
   DTS:CreatorComputerName="DVORNIKD"
   DTS:CreatorName="ITRANSITION\D.Dvornik"
   DTS:DTSID="{89BA7999-4A76-40A7-B114-DFA3FD0A8B3E}"
+  DTS:EnableConfig="True"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="12.0.2430.0"
   DTS:LocaleID="1049"
   DTS:ObjectName="Startup"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{47EA3C07-92AA-4C30-8142-AB435415DBDA}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{12991E29-0B59-4473-AA0C-4758AEC3F37A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
