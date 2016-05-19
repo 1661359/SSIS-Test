@@ -11,8 +11,8 @@
   DTS:LocaleID="1049"
   DTS:ObjectName="InitDb"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{794ED64D-99F6-4A12-8A57-A0C4760CCFD5}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{A2629C89-B8CF-451B-9276-C0C9E1437171}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,7 @@
       DTS:ObjectName="CreateCategoryTable.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\CreateCategoryTable.sql" />
+          DTS:ConnectionString="C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\SqlScripts\CreateCategoryTable.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -33,7 +33,7 @@
       DTS:ObjectName="CreateCustomerTable.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\CreateCustomerTable.sql" />
+          DTS:ConnectionString="C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\SqlScripts\CreateCustomerTable.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -43,7 +43,7 @@
       DTS:ObjectName="CreateProductTable.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\CreateProductTable.sql" />
+          DTS:ConnectionString="C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\SqlScripts\CreateProductTable.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -53,7 +53,7 @@
       DTS:ObjectName="CreateTransactionProductTable.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\CreateTransactionProductTable.sql" />
+          DTS:ConnectionString="C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\SqlScripts\CreateTransactionProductTable.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -63,7 +63,7 @@
       DTS:ObjectName="CreateTransactionTable.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\CreateTransactionTable.sql" />
+          DTS:ConnectionString="C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\SqlScripts\CreateTransactionTable.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -73,7 +73,7 @@
       DTS:ObjectName="DropTablesIfExists.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\DropTablesIfExists.sql" />
+          DTS:ConnectionString="C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\SqlScripts\DropTablesIfExists.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>

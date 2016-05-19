@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DVORNIKD</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATc/Gz9fzDECLqsPk98kK3wAAAAACAAAAAAADZgAAwAAAABAAAACH8qu0jxowK/Bed3IxKnzUAAAAAASAAACgAAAAEAAAAIqYUO9+y7pql9n2XngEvDuIAAAAjpiOEYhi16L71mwY3b6aP5P6TtQeV1QyGNBlEeEcj0MPeo1XMUa3mKoR4Jm0rKAlA0t+FHB4mmTrg5iibemfrx2KSGDIYh6UelInvQz2t1XAjVHaHzRNQYoknVykq++yH6YVRnHNQPmXr24zWFrPsHnIslVifW5Ux8z916QNqEtZIdnO9PRhXxQAAACI00CZWlRhRF5JHYDbPXo4uSEKmw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATc/Gz9fzDECLqsPk98kK3wAAAAACAAAAAAADZgAAwAAAABAAAAA9l4UpGXNho1p3SFlnOSe0AAAAAASAAACgAAAAEAAAALTecJNDmlLMJnJfXIDT2lCIAAAAxUBCMrEJtmwFgXEIi4mST1kUHq6HCF2h3pDl/f+EVwFsmN1XbQjXLG6H1rSwNjh2zmUdJcN7wECfL/zCTyBagouqYAOGGt2HVY/PkcoDvzQ1zd0RM8zcn7OylzwcN+xj1PV7dGP61Qp3rtyXvFyRkcLLkp5s/T88lZalOaaGiTzlXjdRmb3mLxQAAAD5dy6UQmoJWZ/nO6WZOBX3hQDMsA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -52,7 +52,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\test\task2_11.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\WorkingDirectory\source.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -125,7 +125,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">D:\test\task2_11.xls</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\WorkingDirectory\source.xls</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -224,10 +224,10 @@
                 <SSIS:Property SSIS:Name="Name">Startup</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{C78EC461-5DEF-42CA-A373-AB0A1E602604}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{47EA3C07-92AA-4C30-8142-AB435415DBDA}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -241,10 +241,10 @@
                 <SSIS:Property SSIS:Name="Name">LoadDataToDb</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">79</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">81</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{C0CCD553-4085-4DC2-A528-9898FEFBA23D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{D23F6503-0CFD-4319-A022-5068B9CBF96D}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -439,10 +439,10 @@
                 <SSIS:Property SSIS:Name="Name">InitDb</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">24</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">25</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{794ED64D-99F6-4A12-8A57-A0C4760CCFD5}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{A2629C89-B8CF-451B-9276-C0C9E1437171}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -460,7 +460,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\CreateCategoryTable.sql</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\SqlScripts\CreateCategoryTable.sql</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -475,7 +475,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\CreateCustomerTable.sql</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\SqlScripts\CreateCustomerTable.sql</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -490,7 +490,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\CreateProductTable.sql</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\SqlScripts\CreateProductTable.sql</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -505,7 +505,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\CreateTransactionProductTable.sql</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\SqlScripts\CreateTransactionProductTable.sql</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -520,7 +520,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\CreateTransactionTable.sql</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\SqlScripts\CreateTransactionTable.sql</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -535,7 +535,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\DropTablesIfExists.sql</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\SqlScripts\DropTablesIfExists.sql</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -547,10 +547,10 @@
                 <SSIS:Property SSIS:Name="Name">ValidateSourceFile</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">7</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{4C05D7FC-B2CD-49E2-94E5-A4EC8BC7B522}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{334691DD-8901-4EE6-8072-B1D075B7F00B}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

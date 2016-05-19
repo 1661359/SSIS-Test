@@ -11,11 +11,24 @@
   DTS:LocaleID="1049"
   DTS:ObjectName="ValidateSourceFile"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{4C05D7FC-B2CD-49E2-94E5-A4EC8BC7B522}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{579A8FB9-473D-4F2D-93F3-FA15A02B4C09}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Logs Directory]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{D6314BC8-9DD6-4B7F-8F79-12CC9CBA4D6D}"
+      DTS:ObjectName="Logs Directory">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::workingDirectory] +  @[$Project::logDirectory]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="3"
+          DTS:ConnectionString="C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\WorkingDirectory\logs\" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Total Error File]"
       DTS:CreationName="FLATFILE"
@@ -32,7 +45,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1251"
-          DTS:ConnectionString="D:\test\logs\total.txt">
+          DTS:ConnectionString="C:\Users\D.Dvornik\Source\Repos\SSIS-Test\test_task_ssis\WorkingDirectory\logs\total.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -40,7 +53,7 @@
               DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="#"
-              DTS:DTSID="{52ECA5EE-7D72-4693-903E-496BB9EB4EE1}"
+              DTS:DTSID="{1F8D4E47-BDDE-409D-BB3C-66765C310620}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -49,7 +62,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Product"
-              DTS:DTSID="{AC8B24FE-39CD-49D5-B25C-3B7BE7C87B3A}"
+              DTS:DTSID="{81821A3D-2F19-42DA-A620-31F9ABE7476B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -58,7 +71,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Customer"
-              DTS:DTSID="{8F3A8DCC-4EA1-42E2-A654-5D00D0007FBD}"
+              DTS:DTSID="{928FC98F-559E-4B22-B34C-5D97C545E2F6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +79,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="TransactionId"
-              DTS:DTSID="{D4D07427-4FCE-49D0-AC2A-374E9960E026}"
+              DTS:DTSID="{0814FD8C-BB2F-4448-B981-EE8B27D81364}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -74,7 +87,7 @@
               DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Price"
-              DTS:DTSID="{373BD11D-8795-42B4-8BF7-48F54717C31A}"
+              DTS:DTSID="{A3F2B9A3-76FF-4125-B484-FA401E1CCE4B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -82,7 +95,7 @@
               DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="F6"
-              DTS:DTSID="{E780877B-AD2E-4B61-9F66-1F1C500FE7EF}"
+              DTS:DTSID="{CE0BCD6A-06BA-47AB-AB52-5B99CE7311D6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -91,7 +104,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Region"
-              DTS:DTSID="{66265FC7-761D-43BC-A54B-3D22E18A6D0E}"
+              DTS:DTSID="{320F1442-A012-4542-9B75-D82ED912B370}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -100,7 +113,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Category"
-              DTS:DTSID="{AD4E3727-3275-4B15-B806-36A5CF35DBBA}"
+              DTS:DTSID="{C9629141-A507-4B61-8F7C-3E7462330DFB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -108,7 +121,7 @@
               DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="F9"
-              DTS:DTSID="{C00557CD-BFBD-4D06-B768-FAA4AEFF0AD7}"
+              DTS:DTSID="{6D93870F-B4CF-4DF9-B168-FCEF67F20722}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -127,6 +140,23 @@
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Create Logs Directory"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:DTSID="{65f39536-32ad-4b6e-b062-75d305fc26d6}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create Logs Directory"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="CreateDirectory"
+          TaskSourcePath="{D6314BC8-9DD6-4B7F-8F79-12CC9CBA4D6D}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Failure if errors"
       DTS:CreationName="Microsoft.ScriptTask"
@@ -161,134 +191,6 @@
         <pipeline
           version="1">
           <components>
-            <component
-              refId="Package\Validate Excel file\Conditional Split"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[#]"
-                      cachedDataType="r8"
-                      cachedName="#"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[#]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[Product]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Product"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Product]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[Customer]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Customer"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Customer]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[TransactionId]"
-                      cachedDataType="i4"
-                      cachedName="TransactionId"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[Price]"
-                      cachedDataType="r8"
-                      cachedName="Price"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Price]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[Region]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Region"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Region]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[Category]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Category"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Category]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input].Columns[Date]"
-                      cachedDataType="date"
-                      cachedName="Date"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Date]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Validate Excel file\Conditional Split.Outputs[error]"
-                  description="Output 2 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="error"
-                  synchronousInputId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Date]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[#]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Product]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Customer]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Price]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Category]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Region]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL(Date) || ISNULL([#]) || ISNULL(Product) || ISNULL(Customer) || ISNULL(TransactionId) || ISNULL(Price) || ISNULL(Category) || ISNULL(Region)</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Validate Excel file\Conditional Split.Outputs[default]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="default"
-                  synchronousInputId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Validate Excel file\Conditional Split.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Validate Excel file\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Validate Excel file\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Validate Excel file\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
             <component
               refId="Package\Validate Excel file\Excel Source"
               componentClassID="Microsoft.ExcelSource"
@@ -625,140 +527,132 @@
               </outputs>
             </component>
             <component
-              refId="Package\Validate Excel file\Flat File Destination"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Flat File Destination"
-              localeId="1049"
-              name="Flat File Destination">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Validate Excel file\Flat File Destination.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Total Error File]"
-                  connectionManagerRefId="Package.ConnectionManagers[Total Error File]"
-                  name="FlatFileConnection" />
-              </connections>
+              refId="Package\Validate Excel file\Null Fields to Error Output"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Null Fields to Error Output"
+              usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
+                  refId="Package\Validate Excel file\Null Fields to Error Output.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[#]"
+                      refId="Package\Validate Excel file\Null Fields to Error Output.Inputs[Conditional Split Input].Columns[#]"
                       cachedDataType="r8"
                       cachedName="#"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[#]"
                       lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[#]" />
                     <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[Product]"
+                      refId="Package\Validate Excel file\Null Fields to Error Output.Inputs[Conditional Split Input].Columns[Product]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Product"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Product]"
                       lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Product]" />
                     <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[Customer]"
+                      refId="Package\Validate Excel file\Null Fields to Error Output.Inputs[Conditional Split Input].Columns[Customer]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Customer"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Customer]"
                       lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Customer]" />
                     <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[TransactionId]"
+                      refId="Package\Validate Excel file\Null Fields to Error Output.Inputs[Conditional Split Input].Columns[TransactionId]"
                       cachedDataType="i4"
                       cachedName="TransactionId"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TransactionId]"
                       lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]" />
                     <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[Price]"
+                      refId="Package\Validate Excel file\Null Fields to Error Output.Inputs[Conditional Split Input].Columns[Price]"
                       cachedDataType="r8"
                       cachedName="Price"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Price]"
                       lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Price]" />
                     <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[F6]"
-                      cachedDataType="r8"
-                      cachedName="F6"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[F6]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F6]" />
-                    <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[Region]"
+                      refId="Package\Validate Excel file\Null Fields to Error Output.Inputs[Conditional Split Input].Columns[Region]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Region"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Region]"
                       lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Region]" />
                     <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[Category]"
+                      refId="Package\Validate Excel file\Null Fields to Error Output.Inputs[Conditional Split Input].Columns[Category]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Category"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Category]"
                       lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Category]" />
                     <inputColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].Columns[F9]"
-                      cachedDataType="r8"
-                      cachedName="F9"
-                      externalMetadataColumnId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[F9]"
-                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F9]" />
+                      refId="Package\Validate Excel file\Null Fields to Error Output.Inputs[Conditional Split Input].Columns[Date]"
+                      cachedDataType="date"
+                      cachedName="Date"
+                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Date]" />
                   </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[#]"
-                      dataType="r8"
-                      name="#" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Product]"
-                      dataType="wstr"
-                      length="255"
-                      name="Product" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Customer]"
-                      dataType="wstr"
-                      length="255"
-                      name="Customer" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TransactionId]"
-                      dataType="i4"
-                      name="TransactionId" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Price]"
-                      dataType="r8"
-                      name="Price" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[F6]"
-                      dataType="r8"
-                      name="F6" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Region]"
-                      dataType="wstr"
-                      length="255"
-                      name="Region" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Category]"
-                      dataType="wstr"
-                      length="255"
-                      name="Category" />
-                    <externalMetadataColumn
-                      refId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[F9]"
-                      dataType="r8"
-                      name="F9" />
-                  </externalMetadataColumns>
+                  <externalMetadataColumns />
                 </input>
               </inputs>
+              <outputs>
+                <output
+                  refId="Package\Validate Excel file\Null Fields to Error Output.Outputs[error]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="error"
+                  synchronousInputId="Package\Validate Excel file\Null Fields to Error Output.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Date]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[#]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Product]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Customer]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Price]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Category]}) || [ISNULL](#{Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Region]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(Date) || ISNULL([#]) || ISNULL(Product) || ISNULL(Customer) || ISNULL(TransactionId) || ISNULL(Price) || ISNULL(Category) || ISNULL(Region)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Validate Excel file\Null Fields to Error Output.Outputs[default]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="default"
+                  synchronousInputId="Package\Validate Excel file\Null Fields to Error Output.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Validate Excel file\Null Fields to Error Output.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Validate Excel file\Null Fields to Error Output.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Validate Excel file\Null Fields to Error Output.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Validate Excel file\Null Fields to Error Output.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Validate Excel file\Null Fields to Error Output.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Validate Excel file\Null Fields to Error Output.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
             </component>
             <component
               refId="Package\Validate Excel file\Row Count"
@@ -789,21 +683,157 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Validate Excel file\To Log File"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="1049"
+              name="To Log File">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Validate Excel file\To Log File.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Total Error File]"
+                  connectionManagerRefId="Package.ConnectionManagers[Total Error File]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].Columns[#]"
+                      cachedDataType="r8"
+                      cachedName="#"
+                      externalMetadataColumnId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[#]"
+                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[#]" />
+                    <inputColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].Columns[Product]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Product"
+                      externalMetadataColumnId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[Product]"
+                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Product]" />
+                    <inputColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].Columns[Customer]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Customer"
+                      externalMetadataColumnId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[Customer]"
+                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Customer]" />
+                    <inputColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].Columns[TransactionId]"
+                      cachedDataType="i4"
+                      cachedName="TransactionId"
+                      externalMetadataColumnId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[TransactionId]"
+                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[TransactionId]" />
+                    <inputColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].Columns[Price]"
+                      cachedDataType="r8"
+                      cachedName="Price"
+                      externalMetadataColumnId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[Price]"
+                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Price]" />
+                    <inputColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].Columns[F6]"
+                      cachedDataType="r8"
+                      cachedName="F6"
+                      externalMetadataColumnId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[F6]"
+                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F6]" />
+                    <inputColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].Columns[Region]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Region"
+                      externalMetadataColumnId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[Region]"
+                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].Columns[F9]"
+                      cachedDataType="r8"
+                      cachedName="F9"
+                      externalMetadataColumnId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[F9]"
+                      lineageId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output].Columns[F9]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[#]"
+                      dataType="r8"
+                      name="#" />
+                    <externalMetadataColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[Product]"
+                      dataType="wstr"
+                      length="255"
+                      name="Product" />
+                    <externalMetadataColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[Customer]"
+                      dataType="wstr"
+                      length="255"
+                      name="Customer" />
+                    <externalMetadataColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[TransactionId]"
+                      dataType="i4"
+                      name="TransactionId" />
+                    <externalMetadataColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[Price]"
+                      dataType="r8"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[F6]"
+                      dataType="r8"
+                      name="F6" />
+                    <externalMetadataColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="255"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input].ExternalColumns[F9]"
+                      dataType="r8"
+                      name="F9" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
           </components>
           <paths>
             <path
               refId="Package\Validate Excel file.Paths[error]"
               endId="Package\Validate Excel file\Row Count.Inputs[Row Count Input 1]"
               name="error"
-              startId="Package\Validate Excel file\Conditional Split.Outputs[error]" />
+              startId="Package\Validate Excel file\Null Fields to Error Output.Outputs[error]" />
             <path
               refId="Package\Validate Excel file.Paths[Excel Source Output]"
-              endId="Package\Validate Excel file\Conditional Split.Inputs[Conditional Split Input]"
+              endId="Package\Validate Excel file\Null Fields to Error Output.Inputs[Conditional Split Input]"
               name="Excel Source Output"
               startId="Package\Validate Excel file\Excel Source.Outputs[Excel Source Output]" />
             <path
               refId="Package\Validate Excel file.Paths[Row Count Output 1]"
-              endId="Package\Validate Excel file\Flat File Destination.Inputs[Flat File Destination Input]"
+              endId="Package\Validate Excel file\To Log File.Inputs[Flat File Destination Input]"
               name="Row Count Output 1"
               startId="Package\Validate Excel file\Row Count.Outputs[Row Count Output 1]" />
           </paths>
@@ -815,10 +845,18 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{2ce3d74f-1287-495f-8b9d-c611b18f63d3}"
-      DTS:From="Package\Validate Excel file"
+      DTS:DTSID="{EC5E4822-2C97-421A-A534-76C2D2E547D2}"
+      DTS:From="Package\Create Logs Directory"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
+      DTS:To="Package\Validate Excel file" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{A950F866-801D-4E11-B399-3E1C20B324B5}"
+      DTS:From="Package\Validate Excel file"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
       DTS:To="Package\Failure if errors" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
@@ -832,75 +870,33 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Validate Excel file"
-          TopLeft="60,60" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="153,42"
           Id="Package\Failure if errors"
-          TopLeft="69,142" />
+          TopLeft="49,258" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Validate Excel file"
+          TopLeft="50,160" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Create Logs Directory"
+          TopLeft="40,48" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="143.5,102">
+          TopLeft="131.5,90">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40"
+              EndConnector="0,70"
               Start="0,0"
-              End="0,32.5">
+              End="0,62.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </Package>
-  <TaskHost
-    design-time-name="Package\Validate Excel file">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Validate Excel file\Row Count"
-          TopLeft="26.5,209.5" />
-        <NodeLayout
-          Size="174,42"
-          Id="Package\Validate Excel file\Flat File Destination"
-          TopLeft="5.50000000000003,311.5" />
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Validate Excel file\Conditional Split"
-          TopLeft="19,103.5" />
-        <NodeLayout
-          Size="141,42"
-          Id="Package\Validate Excel file\Excel Source"
-          TopLeft="22,5.5" />
-        <EdgeLayout
-          Id="Package\Validate Excel file.Paths[Row Count Output 1]"
-          TopLeft="92.5,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,62.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -910,8 +906,8 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Validate Excel file.Paths[Excel Source Output]"
-          TopLeft="95,47.5">
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="128.5,202">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -931,9 +927,101 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Validate Excel file">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Validate Excel file\Row Count"
+          TopLeft="55.5,209.5" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Validate Excel file\To Log File"
+          TopLeft="29.5,335.5" />
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Validate Excel file\Null Fields to Error Output"
+          TopLeft="19,103.5" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Validate Excel file\Excel Source"
+          TopLeft="22,5.5" />
+        <EdgeLayout
+          Id="Package\Validate Excel file.Paths[Row Count Output 1]"
+          TopLeft="121.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-25.5,84"
+              Start="0,0"
+              End="-25.5,76.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38"
+                    Point2="0,42"
+                    Point3="-4,42" />
+                  <mssgle:LineSegment
+                    End="-21.5,42" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21.5,42"
+                    Point2="-25.5,42"
+                    Point3="-25.5,46" />
+                  <mssgle:LineSegment
+                    End="-25.5,76.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Validate Excel file.Paths[Excel Source Output]"
+          TopLeft="92.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28.5,56"
+              Start="0,0"
+              End="28.5,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24"
+                    Point2="0,28"
+                    Point3="4,28" />
+                  <mssgle:LineSegment
+                    End="24.5,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.5,28"
+                    Point2="28.5,28"
+                    Point3="28.5,32" />
+                  <mssgle:LineSegment
+                    End="28.5,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Validate Excel file.Paths[error]"
-          TopLeft="95,145.5">
+          TopLeft="121.25,145.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -958,5 +1046,18 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Validate Excel file\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
