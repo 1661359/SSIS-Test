@@ -11,8 +11,8 @@
   DTS:LocaleID="1049"
   DTS:ObjectName="ValidateSourceFile"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{579A8FB9-473D-4F2D-93F3-FA15A02B4C09}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{6361A7E2-9665-42D0-982E-215E0AB1A3C3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -154,6 +154,7 @@
       <DTS:ObjectData>
         <FileSystemData
           TaskOperationType="CreateDirectory"
+          TaskOverwriteDestFile="True"
           TaskSourcePath="{D6314BC8-9DD6-4B7F-8F79-12CC9CBA4D6D}" />
       </DTS:ObjectData>
     </DTS:Executable>
